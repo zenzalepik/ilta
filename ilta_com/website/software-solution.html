@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ILTA COM - Jasa Pembuatan Kustom Software Enterprise</title>
+    <meta
+      name="description"
+      content="Jasa pembuatan software custom sesuai proses bisnis Anda. Konsultasi + Wireframe Gratis. 1 aplikasi ditangani 1 full-stack developer. Zero komitmen."
+    />
+    <meta property="og:title" content="ILTA COM - Jasa Pembuatan Kustom Software Enterprise" />
+    <meta property="og:description" content="Bukan sekadar konsultasi. Kami buatkan wireframe awal gratis. 1 aplikasi, 1 developer, tanggung jawab penuh." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      button,
+      a[class*="px-"] {
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          background-color 180ms ease,
+          border-color 180ms ease,
+          color 180ms ease;
+      }
+
+      button:hover,
+      a[class*="px-"]:hover {
+        transform: scale(1.02);
+      }
+
+      .brand-gradient {
+        background-color: #0f172a;
+      }
+
+      .brand-gradient:hover {
+        background-color: #1e293b;
+      }
+
+      .accent-gradient {
+        background-image: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+      }
+
+      .hero-cta-gradient {
+        background-image: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+        box-shadow: 0 18px 45px rgba(37, 99, 235, 0.32), 0 10px 28px rgba(124, 58, 237, 0.26);
+      }
+
+      .hero-cta-gradient:hover {
+        filter: brightness(1.05);
+        box-shadow: 0 20px 55px rgba(37, 99, 235, 0.42), 0 12px 34px rgba(124, 58, 237, 0.20);
+      }
+
+      .hero-border-gradient {
+        background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #2563eb 0%, #7c3aed 100%) border-box;
+        border: 2px solid transparent;
+      }
+
+      .whatsapp-pulse-button {
+        background: #25d366;
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        animation: button-breathe 1.8s ease-in-out infinite;
+        box-shadow: 0 14px 34px rgba(37, 211, 102, 0.36);
+      }
+
+      .whatsapp-pulse-button:hover {
+        background: #1fb85a;
+        color: #ffffff;
+      }
+
+      @keyframes button-breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.045); }
+      }
+
+      .animated-top-border {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .animated-top-border::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-image: linear-gradient(90deg, #2563eb, #7c3aed, #2563eb);
+        background-size: 300% 100%;
+        animation: gradient-text-flow 4s linear infinite;
+      }
+
+      @keyframes gradient-text-flow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 220% 50%; }
+      }
+
+      .gradient-text {
+        background-image: linear-gradient(90deg, #2563eb, #7c3aed, #2563eb);
+        background-size: 220% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradient-text-flow 4s linear infinite;
+      }
+
+      .whatsapp-float {
+        background: #0f172a;
+        animation: whatsapp-color-shift 2s ease-in-out infinite alternate;
+      }
+
+      .whatsapp-float:hover {
+        background: #16a34a;
+      }
+
+      @keyframes whatsapp-color-shift {
+        0% { background-color: #0f172a; }
+        100% { background-color: #16a34a; }
+      }
+
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .section-grid-pattern {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .section-grid-pattern::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232563eb' stroke-width='1'%3E%3Crect x='0.5' y='0.5' width='55' height='55'/%3E%3Crect x='14.5' y='14.5' width='27' height='27' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 56px 56px;
+        mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+      }
+
+      .section-grid-pattern > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .step-number {
+        background-image: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/70 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
+        <a href="#home" class="flex items-center gap-3" aria-label="ILTA COM">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900 text-white font-black text-sm">ILTA</div>
+          <span>
+            <span class="block text-base font-bold leading-tight">ILTA COM</span>
+            <span class="block text-xs font-medium text-gray-500">Custom Software Developer</span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-7 text-sm font-semibold text-gray-700 lg:flex">
+          <a class="hover:text-blue-700" href="#layanan">Layanan</a>
+          <a class="hover:text-blue-700" href="#portofolio">Portofolio</a>
+          <a class="hover:text-blue-700" href="#proses">Proses</a>
+          <a class="hover:text-blue-700" href="#faq">FAQ</a>
+        </div>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <a
+            href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-5 py-3 text-sm font-bold text-gray-900 shadow-sm transition hover:border-blue-600 hover:text-blue-700"
+          >
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+            Chat WhatsApp
+          </a>
+          <a
+            href="#konsultasi"
+            class="brand-gradient inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white shadow-sm transition"
+          >
+            Konsultasi Gratis
+          </a>
+        </div>
+
+        <button
+          id="menuButton"
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-800 lg:hidden"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white px-5 py-4 lg:hidden">
+        <div class="grid gap-3 text-sm font-semibold text-gray-700">
+          <a href="#layanan" class="rounded-lg px-3 py-2 hover:bg-slate-100">Layanan</a>
+          <a href="#portofolio" class="rounded-lg px-3 py-2 hover:bg-slate-100">Portofolio</a>
+          <a href="#proses" class="rounded-lg px-3 py-2 hover:bg-slate-100">Proses</a>
+          <a href="#faq" class="rounded-lg px-3 py-2 hover:bg-slate-100">FAQ</a>
+          <a
+            href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+            target="_blank"
+            rel="noopener"
+            class="brand-gradient mt-2 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 font-bold text-white"
+          >
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+            Konsultasi Gratis
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <!-- HERO SECTION -->
+      <section class="relative overflow-hidden bg-white pt-20">
+        <div class="absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:px-8 lg:py-20">
+          <div>
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-transparent bg-white px-4 py-2 text-sm font-bold" style="background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #2563eb, #7c3aed) border-box;">
+              <i data-lucide="sparkles" class="h-4 w-4 text-blue-600"></i>
+              <span class="gradient-text">Custom Software Developer</span>
+            </div>
+            <h1 class="max-w-3xl text-4xl font-black leading-tight text-gray-950 sm:text-5xl lg:text-6xl">
+              Jasa Pembuatan <em class="not-italic text-blue-700">Kustom Software</em><br />sesuai Proses Bisnis Anda.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+              Konsultasi teknis + wireframe awal gratis. Langsung dikerjakan developer full-stack yang akan menangani proyek Anda. Zero komitmen, zero biaya tersembunyi.
+            </p>
+            <p class="mt-3 text-sm font-semibold text-gray-500">
+              1 aplikasi ditangani 1 orang — tanggung jawab penuh dari backend hingga frontend. Tidak saling tunggu, tidak ada bottleneck tim.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#konsultasi"
+                class="hero-cta-gradient inline-flex items-center justify-center gap-2 rounded-lg px-6 py-4 text-base font-bold text-white transition"
+              >
+                <i data-lucide="calendar" class="h-5 w-5"></i>
+                Mulai Konsultasi Gratis
+              </a>
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+                target="_blank"
+                rel="noopener"
+                class="hero-border-gradient inline-flex items-center justify-center gap-2 rounded-lg px-6 py-4 text-base font-bold text-gray-900 transition hover:text-blue-700"
+              >
+                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                Chat WhatsApp
+              </a>
+            </div>
+            <p class="mt-4 text-xs text-gray-400">Tidak ada komitmen. Tim menghubungi secepatnya.</p>
+          </div>
+
+          <!-- Consultation CTA Card (Hero) -->
+          <div class="relative">
+            <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-2xl text-center">
+              <div class="mb-5 flex justify-center">
+                <div class="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white">
+                  <i data-lucide="message-circle" class="h-8 w-8"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-950">Konsultasi Gratis</h3>
+              <p class="mt-3 text-sm text-gray-600">Ceritakan kebutuhan Anda langsung via WhatsApp. Kami balas secepatnya.</p>
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+                target="_blank"
+                rel="noopener"
+                class="mt-6 hero-cta-gradient inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base font-bold text-white transition w-full"
+              >
+                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                Chat WhatsApp Sekarang →
+              </a>
+
+              <!-- FORM HIDDEN: Aktifkan lagi saat SMTP sudah siap -->
+              <!--
+              <p class="mt-4 text-sm text-gray-500">Atau isi form di bawah:</p>
+              <form id="consultationForm" class="mt-4 grid gap-4 text-left">
+                <div>
+                  <label for="heroName" class="mb-1 block text-sm font-semibold text-gray-700">Nama <span class="text-red-500">*</span></label>
+                  <input type="text" id="heroName" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Nama lengkap" />
+                </div>
+                <div>
+                  <label for="heroEmail" class="mb-1 block text-sm font-semibold text-gray-700">Email <span class="text-red-500">*</span></label>
+                  <input type="email" id="heroEmail" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="email@perusahaan.com" />
+                </div>
+                <div>
+                  <label for="heroWA" class="mb-1 block text-sm font-semibold text-gray-700">WhatsApp <span class="text-red-500">*</span></label>
+                  <input type="tel" id="heroWA" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="08xxxxxxxxxx" />
+                </div>
+                <div>
+                  <label for="heroOrgType" class="mb-1 block text-sm font-semibold text-gray-700">Jenis Organisasi <span class="text-red-500">*</span></label>
+                  <select id="heroOrgType" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                    <option value="">Pilih jenis organisasi</option>
+                    <option value="individual">Individu / Personal</option>
+                    <option value="startup">Startup / UKM</option>
+                    <option value="ngo">NGO / Yayasan</option>
+                    <option value="government">Instansi Pemerintah</option>
+                    <option value="enterprise">Perusahaan / Korporasi</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="heroOrgName" class="mb-1 block text-sm font-semibold text-gray-700">Nama Perusahaan / Organisasi</label>
+                  <input type="text" id="heroOrgName" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Opsional" />
+                </div>
+                <div>
+                  <label for="heroNeed" class="mb-1 block text-sm font-semibold text-gray-700">Kebutuhan utama <span class="text-red-500">*</span></label>
+                  <select id="heroNeed" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                    <option value="">Pilih kebutuhan</option>
+                    <option value="custom-software">Custom Software / ERP</option>
+                    <option value="crm">CRM Custom Perusahaan</option>
+                    <option value="hris">HRIS Custom</option>
+                    <option value="web-app">Web Application & Portal</option>
+                    <option value="api">API & Integrasi Sistem</option>
+                    <option value="qa">QA & Software Testing</option>
+                    <option value="other">Lainnya</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="heroMessage" class="mb-1 block text-sm font-semibold text-gray-700">Pesan <span class="text-red-500">*</span></label>
+                  <textarea id="heroMessage" required rows="3" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Ceritakan kebutuhan Anda secara singkat..."></textarea>
+                </div>
+                <button type="submit" class="hero-cta-gradient w-full rounded-lg px-6 py-4 text-base font-bold text-white transition">
+                  Kirim →
+                </button>
+              </form>
+              <p class="mt-3 text-center text-xs text-gray-400">Data Anda aman. Tidak ada komitmen.</p>
+              -->
+              <!-- END FORM HIDDEN -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUE PROPS BAR -->
+      <section class="border-y border-gray-100 bg-slate-50">
+        <div class="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-3 lg:px-8">
+          <div class="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-5">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <i data-lucide="palette" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-950">Wireframe Gratis</h4>
+              <p class="text-sm text-gray-500">Wireframe awal 1 screen utama setelah konsultasi</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-5">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-violet-100 text-violet-700">
+              <i data-lucide="user-check" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-950">1 Aplikasi, 1 Developer</h4>
+              <p class="text-sm text-gray-500">Tanggung jawab penuh BE & FE, tidak saling tunggu</p>
+            </div>
+          </div>
+            <div class="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-5">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+              <i data-lucide="zap" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-950">Respons Cepat</h4>
+              <p class="text-sm text-gray-500">Kami menghubungi Anda secepatnya via WhatsApp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAIN POINTS -->
+      <section class="bg-white py-16 lg:py-20" id="masalah">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase text-blue-700">Kenali masalahnya</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Apakah perusahaan Anda menghadapi salah satu dari ini?</h2>
+          </div>
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-lg border border-gray-200 p-6 transition hover:shadow-lg">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                <i data-lucide="clock-alert" class="h-6 w-6"></i>
+              </div>
+              <h3 class="mt-5 text-lg font-bold text-gray-950">Proses bisnis masih manual & lambat</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">Data diinput ulang, laporan manual, human error berulang karena belum ada sistem terintegrasi.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 p-6 transition hover:shadow-lg">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-rose-100 text-rose-700">
+                <i data-lucide="trending-down" class="h-6 w-6"></i>
+              </div>
+              <h3 class="mt-5 text-lg font-bold text-gray-950">Software existing tidak bisa scale</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">Bisnis tumbuh, tapi sistem lama tidak mampu mengikuti — lemot, sering down, sulit dikembangkan.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 p-6 transition hover:shadow-lg">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 text-orange-700">
+                <i data-lucide="triangle-alert" class="h-6 w-6"></i>
+              </div>
+              <h3 class="mt-5 text-lg font-bold text-gray-950">Vendor sebelumnya tidak deliver</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">Timeline meleset, kualitas tidak sesuai, atau komunikasi buruk membuat proyek terbengkalai.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 p-6 transition hover:shadow-lg">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+                <i data-lucide="database-zap" class="h-6 w-6"></i>
+              </div>
+              <h3 class="mt-5 text-lg font-bold text-gray-950">Data tersebar, sulit dianalisa</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">Informasi ada di spreadsheet, email, sistem berbeda — keputusan jadi lambat dan tidak akurat.</p>
+            </article>
+          </div>
+          <div class="mt-8 text-center">
+            <p class="text-sm font-semibold text-gray-500">Kami sudah membantu 100+ perusahaan menyelesaikan ini.</p>
+            <p class="text-sm text-gray-400">Dari startup scale-up hingga korporasi nasional dan pemerintah.</p>
+            <a href="#konsultasi" class="mt-4 inline-flex items-center gap-2 font-bold text-blue-700 hover:text-blue-800">
+              Diskusi Sekarang
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section-grid-pattern bg-slate-50 py-16 lg:py-20" id="layanan">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-sm font-bold uppercase text-blue-700">Layanan kami</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Bagaimana kami membantu bisnis Anda</h2>
+            <p class="mt-4 text-base leading-7 text-gray-600">Tidak hanya membangun software — kami pahami proses bisnis Anda dan rancang solusi yang tepat sasaran.</p>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">01</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">Custom Software & ERP</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Sistem yang dirancang khusus untuk SOP dan alur kerja unik perusahaan — bukan template yang dipaksakan.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">02</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">CRM & HRIS Custom</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Kelola hubungan pelanggan dan SDM dengan sistem terintegrasi penuh dengan proses bisnis internal Anda.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">03</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">Web Application & Portal</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Platform web yang scalable, aman, dan mudah dikelola — tanpa ketergantungan vendor jangka panjang.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">04</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">API & Integrasi Sistem</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Hubungkan sistem lama yang terpisah agar data mengalir mulus antar departemen tanpa silo informasi.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">05</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">QA & Software Testing</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">ISO 27001:2022 — keamanan dan kualitas diuji menyeluruh sebelum setiap delivery ke production.</p>
+            </article>
+            <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <span class="step-number text-2xl font-black">06</span>
+              <h3 class="mt-3 text-xl font-bold text-gray-950">Maintenance & Support</h3>
+              <p class="mt-3 text-sm leading-6 text-gray-600">Go-live bukan akhir kerja sama. Kami dampingi dengan SLA maintenance dan update rutin pasca-launch.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO / TRACK RECORD -->
+      <section class="bg-white py-16 lg:py-20" id="portofolio">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div>
+              <p class="text-sm font-bold uppercase text-blue-700">Track record</p>
+              <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Dipercaya perusahaan terkemuka Indonesia</h2>
+            </div>
+            <a href="#konsultasi" class="inline-flex items-center gap-2 font-bold text-blue-700 hover:text-blue-800">
+              Mulai Proyek
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div class="rounded-lg border border-gray-200 bg-slate-50 p-5 text-center">
+              <div class="text-3xl font-black text-blue-700">14+</div>
+              <div class="mt-1 text-sm font-semibold text-gray-500">Tahun Pengalaman</div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-slate-50 p-5 text-center">
+              <div class="text-3xl font-black text-blue-700">100+</div>
+              <div class="mt-1 text-sm font-semibold text-gray-500">Klien Enterprise</div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-slate-50 p-5 text-center">
+              <div class="text-3xl font-black text-blue-700">350+</div>
+              <div class="mt-1 text-sm font-semibold text-gray-500">Proyek Selesai</div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-slate-50 p-5 text-center">
+              <div class="text-3xl font-black text-blue-700">50+</div>
+              <div class="mt-1 text-sm font-semibold text-gray-500">Professionals</div>
+            </div>
+          </div>
+
+          <!-- Case Studies -->
+          <div class="mt-10 grid gap-5 md:grid-cols-2">
+            <article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:shadow-lg">
+              <div class="h-40 bg-gradient-to-br from-blue-100 to-violet-100 p-6">
+                <div class="flex h-full flex-col justify-between rounded-lg border border-white/70 bg-white/75 p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">Astra International</span>
+                    <i data-lucide="external-link" class="h-4 w-4 text-gray-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">SAM Advance 2.0</h4>
+                    <p class="text-sm text-gray-600">Sistem survey & monitoring nasional untuk ribuan dealer Astra.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Ribuan Dealer</span>
+                  <span class="rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">Real-time</span>
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">Mobile-ready</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:shadow-lg">
+              <div class="h-40 bg-gradient-to-br from-amber-100 to-orange-100 p-6">
+                <div class="flex h-full flex-col justify-between rounded-lg border border-white/70 bg-white/75 p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="rounded-full bg-amber-600 px-3 py-1 text-xs font-bold text-white">Kemenkeu — DJPPR</span>
+                    <i data-lucide="external-link" class="h-4 w-4 text-gray-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">KPBU 4.0</h4>
+                    <p class="text-sm text-gray-600">Platform digitalisasi kerja sama pemerintah dan badan usaha skala nasional.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700">Skala Nasional</span>
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">World Bank</span>
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">Auditable</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:shadow-lg">
+              <div class="h-40 bg-gradient-to-br from-emerald-100 to-teal-100 p-6">
+                <div class="flex h-full flex-col justify-between rounded-lg border border-white/70 bg-white/75 p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="rounded-full bg-emerald-600 px-3 py-1 text-xs font-bold text-white">UNDP Indonesia</span>
+                    <i data-lucide="external-link" class="h-4 w-4 text-gray-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">SMILE — Vaccine Monitoring</h4>
+                    <p class="text-sm text-gray-600">Sistem monitoring vaksin untuk 11.976 Puskesmas & RS di 34 provinsi.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">11.976 Fasilitas</span>
+                  <span class="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700">34 Provinsi</span>
+                  <span class="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">Error -95%</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:shadow-lg">
+              <div class="h-40 bg-gradient-to-br from-cyan-100 to-sky-100 p-6">
+                <div class="flex h-full flex-col justify-between rounded-lg border border-white/70 bg-white/75 p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="rounded-full bg-cyan-600 px-3 py-1 text-xs font-bold text-white">PT Astra Digital Internasional</span>
+                    <i data-lucide="external-link" class="h-4 w-4 text-gray-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-950">Movic Partner App</h4>
+                    <p class="text-sm text-gray-600">Mobile app multi-platform untuk ribuan mitra rental kendaraan Astra.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700">Multi-platform</span>
+                  <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">3 Layanan</span>
+                  <span class="rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">Ribuan Mitra</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Client Logos -->
+          <div class="mt-12">
+            <p class="mb-6 text-center text-sm font-semibold text-gray-500">Dan 100+ klien lainnya</p>
+            <div class="flex flex-wrap items-center justify-center gap-6">
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">PERTAMINA</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">ASTRA</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">KEMENKEU</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">UNDP</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">BPOM</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">KITABISA</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">FLIP</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">DKSH</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">HNI HPAI</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">IPSOS</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">HONDA</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">TOYOTA</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">NESTLE</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">MUSEUM NASIONAL</span>
+              <span class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-600">KPK</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIFFERENTIATOR -->
+      <section class="section-grid-pattern bg-slate-50 py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-sm font-bold uppercase text-blue-700">Kenapa berbeda</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Konsultasi + Wireframe Gratis — Langsung oleh Developer</h2>
+            <p class="mt-4 text-base leading-7 text-gray-600">
+              Banyak yang bilang "konsultasi gratis". Tapi konsultasi itu abstrak. Di ILTA COM, kami <strong>kerjakan langsung</strong> — wireframe awal dan breakdown teknis oleh developer full-stack yang akan menangani proyek Anda.
+            </p>
+          </div>
+
+          <!-- 4 Steps -->
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">01</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Request konsultasi</h4>
+              <p class="mt-2 text-sm text-gray-600">Isi form — developer menghubungi dalam 1 jam untuk scheduling.</p>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">02</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Developer langsung terlibat</h4>
+              <p class="mt-2 text-sm text-gray-600">Full-stack developer — bukan sales — mendengar kebutuhan bisnis Anda secara mendalam.</p>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">03</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Terima Wireframe + Breakdown Teknis</h4>
+              <p class="mt-2 text-sm text-gray-600">Wireframe awal 1 screen utama dan breakdown teknis — gratis, tanpa syarat lanjut.</p>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">04</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Keputusan ada di tangan Anda</h4>
+              <p class="mt-2 text-sm text-gray-600">Lanjut bersama kami atau gunakan dokumen untuk keputusan internal — sepenuhnya pilihan Anda.</p>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="mt-10 overflow-hidden rounded-lg border border-gray-200 bg-white">
+            <div class="grid grid-cols-3 border-b border-gray-200 bg-gray-50 px-6 py-4 text-sm font-bold text-gray-700">
+              <div></div>
+              <div class="text-center text-gray-400">Software House Lain</div>
+              <div class="text-center text-blue-700">ILTA COM ✓</div>
+            </div>
+            <div class="divide-y divide-gray-100">
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Konsultasi</div>
+                <div class="text-center text-gray-400">"Konsultasi" (ngobrol saja)</div>
+                <div class="text-center font-semibold text-blue-700">Wireframe + breakdown teknis</div>
+              </div>
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Penanganan</div>
+                <div class="text-center text-gray-400">Ditangani tim sales</div>
+                <div class="text-center font-semibold text-blue-700">Langsung full-stack developer</div>
+              </div>
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Deliverable</div>
+                <div class="text-center text-gray-400">Tidak ada deliverable</div>
+                <div class="text-center font-semibold text-blue-700">Wireframe awal gratis</div>
+              </div>
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Komitmen</div>
+                <div class="text-center text-gray-400">Push langsung ke kontrak</div>
+                <div class="text-center font-semibold text-blue-700">Zero komitmen</div>
+              </div>
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Pengerjaan</div>
+                <div class="text-center text-gray-400">Tim terpisah BE & FE, saling tunggu</div>
+                <div class="text-center font-semibold text-blue-700">1 developer, tanggung jawab penuh</div>
+              </div>
+              <div class="grid grid-cols-3 px-6 py-4 text-sm">
+                <div class="text-gray-600">Timeline</div>
+                <div class="text-center text-gray-400">Tidak jelas, sering molor</div>
+                <div class="text-center font-semibold text-blue-700">Estimasi realistis dari developer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#konsultasi" class="hero-cta-gradient inline-flex items-center gap-2 rounded-lg px-6 py-4 text-base font-bold text-white transition">
+              Klaim Konsultasi + Wireframe Gratis
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <p class="mt-3 text-sm text-gray-400">Tidak ada komitmen. Tim merespons dalam 1 jam.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="bg-white py-16 lg:py-20" id="proses">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-sm font-bold uppercase text-blue-700">Cara kerja kami</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Transparan dari awal hingga akhir</h2>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+            <div class="relative rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">01</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Konsultasi + Wireframe Gratis</h4>
+              <p class="mt-2 text-sm text-gray-600">Langsung dikerjakan developer. Terima wireframe dan breakdown teknis tanpa komitmen.</p>
+            </div>
+            <div class="relative rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">02</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Discovery & Scoping</h4>
+              <p class="mt-2 text-sm text-gray-600">Roadmap teknis, estimasi biaya, dan timeline yang jelas dan realistis.</p>
+            </div>
+            <div class="relative rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">03</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Design & Dev</h4>
+              <p class="mt-2 text-sm text-gray-600">Iterasi Agile — update rutin, demo berkala, progress selalu terlihat.</p>
+            </div>
+            <div class="relative rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">04</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">QA & Testing</h4>
+              <p class="mt-2 text-sm text-gray-600">ISO 27001:2022 — keamanan dan kualitas diuji sebelum delivery.</p>
+            </div>
+            <div class="relative rounded-lg border border-gray-200 bg-white p-6">
+              <span class="step-number text-2xl font-black">05</span>
+              <h4 class="mt-3 text-lg font-bold text-gray-950">Launch & Support</h4>
+              <p class="mt-2 text-sm text-gray-600">Pendampingan go-live dan SLA maintenance proaktif pasca-launch.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CONSULTATION FORM -->
+      <section class="section-grid-pattern bg-slate-50 py-16 lg:py-20" id="konsultasi">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-sm font-bold uppercase text-blue-700">Mulai sekarang</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Ceritakan kebutuhan Anda</h2>
+            <p class="mt-4 text-base leading-7 text-gray-600">Konsultasi pertama gratis — tidak ada komitmen. Kami menghubungi via WhatsApp secepatnya.</p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-lg border border-gray-200 bg-white p-5">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+                  <i data-lucide="palette" class="h-5 w-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-950">Konsultasi + Wireframe Gratis</h4>
+                  <p class="text-sm text-gray-500">Dikerjakan langsung developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-5">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100 text-violet-700">
+                  <i data-lucide="user-check" class="h-5 w-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-950">1 Aplikasi, 1 Developer</h4>
+                  <p class="text-sm text-gray-500">Tanggung jawab penuh BE & FE, tidak saling tunggu</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-5">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+                  <i data-lucide="zap" class="h-5 w-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-950">Respons Cepat</h4>
+                  <p class="text-sm text-gray-500">Kami menghubungi via WhatsApp secepatnya</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-5">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                  <i data-lucide="handshake" class="h-5 w-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-950">Partner jangka panjang</h4>
+                  <p class="text-sm text-gray-500">Satu developer dari awal hingga maintenance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 text-center">
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+              target="_blank"
+              rel="noopener"
+              class="hero-cta-gradient inline-flex items-center gap-3 rounded-lg px-8 py-5 text-lg font-bold text-white transition"
+            >
+              <i data-lucide="message-circle" class="h-6 w-6"></i>
+              Konsultasi via WhatsApp →
+            </a>
+            <p class="mt-3 text-sm text-gray-400">Ceritakan kebutuhan Anda langsung. Tidak ada komitmen.</p>
+          </div>
+
+          <!-- FORM HIDDEN: Aktifkan lagi saat SMTP sudah siap -->
+          <!--
+          <div class="mt-10 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="rounded-lg border border-gray-200 bg-white p-5">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+                    <i data-lucide="palette" class="h-5 w-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-950">Konsultasi + Wireframe Gratis</h4>
+                    <p class="text-sm text-gray-500">Dikerjakan langsung developer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-white p-5">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100 text-violet-700">
+                    <i data-lucide="user-check" class="h-5 w-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-950">1 Aplikasi, 1 Developer</h4>
+                    <p class="text-sm text-gray-500">Tanggung jawab penuh BE & FE, tidak saling tunggu</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-white p-5">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+                    <i data-lucide="zap" class="h-5 w-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-950">Respons Cepat</h4>
+                    <p class="text-sm text-gray-500">Kami menghubungi via WhatsApp secepatnya</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-white p-5">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                    <i data-lucide="handshake" class="h-5 w-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-950">Partner jangka panjang</h4>
+                    <p class="text-sm text-gray-500">Satu developer dari awal hingga maintenance</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full lg:w-[480px]">
+              <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl">
+                <h3 class="mb-1 text-xl font-bold text-gray-950">Konsultasi Gratis</h3>
+                <p class="mb-5 text-sm text-gray-500">Isi form — kami hubungi secepatnya</p>
+                <form id="consultationFormBottom" class="grid gap-4">
+                  <div>
+                    <label for="bottomName" class="mb-1 block text-sm font-semibold text-gray-700">Nama <span class="text-red-500">*</span></label>
+                    <input type="text" id="bottomName" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Nama lengkap" />
+                  </div>
+                  <div>
+                    <label for="bottomEmail" class="mb-1 block text-sm font-semibold text-gray-700">Email <span class="text-red-500">*</span></label>
+                    <input type="email" id="bottomEmail" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="email@perusahaan.com" />
+                  </div>
+                  <div>
+                    <label for="bottomWA" class="mb-1 block text-sm font-semibold text-gray-700">WhatsApp <span class="text-red-500">*</span></label>
+                    <input type="tel" id="bottomWA" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="08xxxxxxxxxx" />
+                  </div>
+                  <div>
+                    <label for="bottomOrgType" class="mb-1 block text-sm font-semibold text-gray-700">Jenis Organisasi <span class="text-red-500">*</span></label>
+                    <select id="bottomOrgType" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                      <option value="">Pilih jenis organisasi</option>
+                      <option value="individual">Individu / Personal</option>
+                      <option value="startup">Startup / UKM</option>
+                      <option value="ngo">NGO / Yayasan</option>
+                      <option value="government">Instansi Pemerintah</option>
+                      <option value="enterprise">Perusahaan / Korporasi</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="bottomOrgName" class="mb-1 block text-sm font-semibold text-gray-700">Nama Perusahaan / Organisasi</label>
+                    <input type="text" id="bottomOrgName" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Opsional" />
+                  </div>
+                  <div>
+                    <label for="bottomNeed" class="mb-1 block text-sm font-semibold text-gray-700">Kebutuhan utama <span class="text-red-500">*</span></label>
+                    <select id="bottomNeed" required class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100">
+                      <option value="">Pilih kebutuhan</option>
+                      <option value="custom-software">Custom Software / ERP</option>
+                      <option value="crm">CRM Custom Perusahaan</option>
+                      <option value="hris">HRIS Custom</option>
+                      <option value="web-app">Web Application & Portal</option>
+                      <option value="api">API & Integrasi Sistem</option>
+                      <option value="qa">QA & Software Testing</option>
+                      <option value="other">Lainnya</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="bottomMessage" class="mb-1 block text-sm font-semibold text-gray-700">Pesan <span class="text-red-500">*</span></label>
+                    <textarea id="bottomMessage" required rows="3" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-100" placeholder="Ceritakan kebutuhan Anda secara singkat..."></textarea>
+                  </div>
+                  <button type="submit" class="hero-cta-gradient w-full rounded-lg px-6 py-4 text-base font-bold text-white transition">
+                    Kirim →
+                  </button>
+                </form>
+                <p class="mt-3 text-center text-xs text-gray-400">Tidak ada komitmen, tidak ada biaya tersembunyi.</p>
+              </div>
+            </div>
+          </div>
+          -->
+          <!-- END FORM HIDDEN -->
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="bg-white py-16 lg:py-20" id="faq">
+        <div class="mx-auto max-w-4xl px-5 lg:px-8">
+          <div class="text-center">
+            <p class="text-sm font-bold uppercase text-blue-700">FAQ</p>
+            <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl">Pertanyaan yang sering ditanyakan</h2>
+          </div>
+          <div class="mt-10 grid gap-3">
+            <details class="rounded-lg border border-gray-200 bg-white p-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold">
+                Apakah konsultasi dan wireframe benar-benar gratis?
+                <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-gray-400"></i>
+              </summary>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Ya, sepenuhnya gratis. Anda mendapatkan sesi konsultasi teknis bersama developer dan wireframe awal untuk 1 screen utama tanpa biaya. Tidak ada kewajiban untuk lanjut ke proyek.</p>
+            </details>
+            <details class="rounded-lg border border-gray-200 bg-white p-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold">
+                Siapa yang menangani konsultasi — sales atau developer?
+                <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-gray-400"></i>
+              </summary>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Full-stack developer yang akan mengerjakan proyek Anda — bukan tim sales. Diskusi lebih substansif dan Anda langsung berinteraksi dengan orang yang bertanggung jawab penuh atas aplikasi.</p>
+            </details>
+            <details class="rounded-lg border border-gray-200 bg-white p-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold">
+                Berapa estimasi biaya pembuatan custom software?
+                <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-gray-400"></i>
+              </summary>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Setiap proyek berbeda tergantung kompleksitas dan integrasi yang dibutuhkan. Kami tidak menyediakan paket fixed — justru karena itu solusi kami lebih tepat sasaran. Konsultasi gratis untuk estimasi akurat.</p>
+            </details>
+            <details class="rounded-lg border border-gray-200 bg-white p-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold">
+                Berapa lama proses pengembangan?
+                <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-gray-400"></i>
+              </summary>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Rata-rata 3–6 bulan tergantung scope. Timeline jelas diberikan di fase discovery. Karena ditangani 1 developer dari awal hingga akhir, tidak ada bottleneck atau saling tunggu antar tim.</p>
+            </details>
+            <details class="rounded-lg border border-gray-200 bg-white p-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold">
+                Apa yang membedakan dari software house lain?
+                <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-gray-400"></i>
+              </summary>
+              <p class="mt-4 text-sm leading-6 text-gray-600">Tiga hal: (1) Konsultasi + wireframe gratis langsung oleh developer — bukan sales. (2) 1 aplikasi ditangani 1 orang — tanggung jawab penuh dari backend hingga frontend, tidak saling tunggu. (3) Estimasi realistis karena yang memberikan estimasi adalah orang yang akan mengerjakannya.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-900 font-black text-sm">ILTA</div>
+            <span class="font-bold">ILTA COM</span>
+          </div>
+          <p class="mt-4 max-w-md text-sm leading-6 text-gray-400">Jasa pembuatan software custom, ERP, CRM, HRIS, web application, API integration, QA testing, dan maintenance.</p>
+          <p class="mt-4 max-w-md text-sm leading-6 text-gray-400">
+            1 aplikasi ditangani 1 full-stack developer — tanggung jawab penuh dari backend hingga frontend.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold">Navigasi</h3>
+          <div class="mt-4 grid gap-2 text-sm font-semibold text-gray-400">
+            <a href="#layanan" class="hover:text-white">Layanan</a>
+            <a href="#portofolio" class="hover:text-white">Portofolio</a>
+            <a href="#proses" class="hover:text-white">Proses</a>
+            <a href="#faq" class="hover:text-white">FAQ</a>
+            <a href="#konsultasi" class="hover:text-white">Konsultasi</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Kontak</h3>
+          <div class="mt-4 grid gap-2 text-sm text-gray-400">
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="hover:text-white">WhatsApp: +62 812-3456-7890</a>
+            <a href="mailto:hello@ilta.com" class="hover:text-white">Email: hello@ilta.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 px-5 py-5 text-center text-sm font-semibold text-gray-500">
+        &copy; 2026 ILTA COM. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20kustom%20software."
+      target="_blank"
+      rel="noopener"
+      class="whatsapp-float fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition"
+      aria-label="Chat WhatsApp"
+    >
+      <svg class="h-7 w-7" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
+        <path d="M19.11 17.22c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.62.14-.18.27-.71.9-.87 1.08-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.38-1.64-1.54-1.92-.16-.27-.02-.42.12-.56.13-.13.28-.32.42-.48.14-.16.18-.27.28-.46.09-.18.05-.34-.02-.48-.07-.14-.62-1.49-.85-2.04-.22-.54-.45-.46-.62-.47h-.53c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.99 2.66 1.13 2.84c.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.64-.67 1.87-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.19-.53-.33Z" />
+        <path d="M16.03 3C8.87 3 3.05 8.75 3.05 15.82c0 2.25.6 4.45 1.73 6.38L3 29l6.98-1.78a13.06 13.06 0 0 0 6.05 1.51C23.19 28.73 29 22.98 29 15.91S23.19 3 16.03 3Zm0 23.55c-1.93 0-3.82-.51-5.47-1.48l-.39-.23-4.14 1.06 1.1-4.01-.25-.41a10.6 10.6 0 0 1-1.62-5.66c0-5.87 4.83-10.64 10.77-10.64S26.8 10.04 26.8 15.91 21.97 26.55 16.03 26.55Z" />
+      </svg>
+    </a>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuButton.addEventListener("click", () => {
+        const expanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!expanded));
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // FORM HANDLER HIDDEN: Aktifkan lagi saat form sudah dipakai
+      /*
+      ["consultationForm", "consultationFormBottom"].forEach((formId) => {
+        const form = document.getElementById(formId);
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const wa = form.querySelector('input[type="tel"]').value;
+            const orgType = form.querySelector("select").value;
+            const need = form.querySelectorAll("select")[1]?.value || "";
+            const message = form.querySelector("textarea")?.value || "";
+
+            const waMessage = `Halo ILTA COM, saya ingin konsultasi pembuatan kustom software.%0A%0ANama: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AWA: ${encodeURIComponent(wa)}%0AOrganisasi: ${encodeURIComponent(orgType)}%0AKebutuhan: ${encodeURIComponent(need)}%0APesan: ${encodeURIComponent(message)}`;
+
+            window.open(`https://wa.me/6281234567890?text=${waMessage}`, "_blank");
+            form.reset();
+            alert("Terima kasih! Anda akan diarahkan ke WhatsApp.");
+          });
+        }
+      });
+      */
+
+      window.addEventListener("load", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>
