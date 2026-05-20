@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ALTA COM</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Anton'],
+            body: ['Montserrat']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-body bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="font-heading text-xl tracking-wide">ALTA COM</h1>
+    <a href="#" class="bg-black text-white px-5 py-2 rounded-full text-sm">
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-20 relative overflow-hidden">
+
+  <!-- gradient blob -->
+  <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-pink-400 to-purple-600 rounded-full blur-3xl opacity-30"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- TEXT -->
+    <div class="relative z-10">
+
+      <h2 class="font-heading text-[48px] md:text-[80px] leading-[0.95] mb-6">
+        SERVICE<br>
+        LAPTOP<br>
+        JOMBANG
+      </h2>
+
+      <p class="text-gray-500 text-lg max-w-md mb-8">
+        Install ulang, upgrade SSD/RAM, cleaning overheat, dan PO sparepart.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#" class="bg-black text-white px-6 py-3 rounded-lg">
+          Booking
+        </a>
+        <a href="#" class="px-6 py-3 border rounded-lg">
+          Konsultasi
+        </a>
+      </div>
+
+    </div>
+
+    <!-- IMAGE (OVERLAP STYLE) -->
+    <div class="relative">
+      <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+           class="rounded-2xl shadow-2xl">
+
+      <div class="absolute -bottom-6 -left-6 bg-white shadow-xl p-5 rounded-xl w-40">
+        <p class="text-sm font-semibold">Home Service</p>
+        <p class="text-xs text-gray-500">Datang ke rumah</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STRIP INFO -->
+<section class="border-y py-6">
+  <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between text-sm text-gray-600 gap-4">
+    <span>✔ Harga Transparan</span>
+    <span>✔ Teknisi Panggilan</span>
+    <span>✔ Sparepart Baru & Bekas</span>
+    <span>✔ Garansi Service</span>
+  </div>
+</section>
+
+<!-- LAYANAN (ASYMMETRIC) -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="mb-16 max-w-lg">
+      <h3 class="font-heading text-5xl mb-4">LAYANAN</h3>
+      <p class="text-gray-500">Fokus pada solusi yang paling dibutuhkan pengguna laptop sehari-hari.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <i data-feather="monitor"></i>
+        <h4 class="mt-4 font-semibold text-lg">Install Ulang</h4>
+        <p class="text-sm text-gray-500">Rp80.000</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition translate-y-8">
+        <i data-feather="hard-drive"></i>
+        <h4 class="mt-4 font-semibold text-lg">Upgrade SSD</h4>
+        <p class="text-sm text-gray-500">Rp50.000</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <i data-feather="cpu"></i>
+        <h4 class="mt-4 font-semibold text-lg">Upgrade RAM</h4>
+        <p class="text-sm text-gray-500">Rp50.000</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition translate-y-8">
+        <i data-feather="wind"></i>
+        <h4 class="mt-4 font-semibold text-lg">Cleaning</h4>
+        <p class="text-sm text-gray-500">Rp150.000</p>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <i data-feather="shopping-cart"></i>
+        <h4 class="mt-4 font-semibold text-lg">PO Sparepart</h4>
+      </div>
+
+      <div class="p-6 border rounded-xl hover:shadow-lg transition translate-y-8">
+        <i data-feather="home"></i>
+        <h4 class="mt-4 font-semibold text-lg">Home Service</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING FOCUS -->
+<section class="py-24 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h3 class="font-heading text-6xl leading-tight mb-6">
+        HARGA<br>JUJUR
+      </h3>
+      <p class="text-gray-400">Tanpa biaya tersembunyi. Semua transparan sebelum pengerjaan.</p>
+    </div>
+
+    <div class="space-y-6">
+
+      <div class="flex justify-between border-b pb-2">
+        <span>Install Ulang</span>
+        <span>Rp80K</span>
+      </div>
+
+      <div class="flex justify-between border-b pb-2">
+        <span>Upgrade SSD</span>
+        <span>Rp50K</span>
+      </div>
+
+      <div class="flex justify-between border-b pb-2">
+        <span>Upgrade RAM</span>
+        <span>Rp50K</span>
+      </div>
+
+      <div class="flex justify-between text-pink-400 font-semibold">
+        <span>RAM + SSD</span>
+        <span>Rp60K</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 text-center relative">
+
+  <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 opacity-90"></div>
+
+  <div class="relative z-10 text-white">
+    <h3 class="font-heading text-5xl mb-4">SIAP SERVICE?</h3>
+    <p class="mb-6">Teknisi siap datang ke rumah Anda</p>
+    <a href="#" class="bg-white text-black px-8 py-3 rounded-lg">
+      Hubungi Sekarang
+    </a>
+  </div>
+
+</section>
+
+<footer class="py-8 text-center text-gray-400">
+  © 2026 ALTA COM
+</footer>
+
+<script>
+feather.replace()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artikel - ILTA COM</title>
+    <meta name="description" content="Daftar artikel ILTA COM tentang website, copywriting, marketing, selling, dan aplikasi mobile untuk bisnis." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body { font-family: Montserrat, ui-sans-serif, system-ui, sans-serif; }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: Anton, Impact, sans-serif;
+        font-weight: 500 !important;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+      button, a[class*="px-"] { font-weight: 500 !important; }
+      .accent-gradient { background-image: linear-gradient(90deg, #ec4899 0%, #9333ea 100%); }
+      .hero-gradient { background-image: linear-gradient(135deg, #000000 0%, #111827 52%, #581c87 100%); }
+      .brand-button { background: #000; color: #fff; }
+      .brand-button:hover { background: #111827; }
+      article { transition: box-shadow 180ms ease, transform 180ms ease; }
+      article:hover { box-shadow: 0 18px 45px rgba(17, 24, 39, 0.10); transform: translateY(-2px); }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/70 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-black text-sm font-black text-white">IC</span>
+          <span>
+            <span class="block text-base font-black leading-tight">ILTA COM</span>
+            <span class="block text-xs font-medium text-gray-500">Artikel website dan aplikasi</span>
+          </span>
+        </a>
+        <div class="hidden items-center gap-7 text-sm font-semibold text-gray-700 lg:flex">
+          <a class="hover:text-black" href="index.html#layanan">Layanan</a>
+          <a class="hover:text-black" href="index.html#paket">Paket</a>
+          <a class="hover:text-black" href="artikel.html">Artikel</a>
+          <a class="hover:text-black" href="index.html#faq">FAQ</a>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20konsultasi%20pembuatan%20website%20untuk%20bisnis%20saya." target="_blank" rel="noopener" class="brand-button hidden rounded-full px-5 py-3 text-sm lg:inline-flex">Konsultasi</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-gradient px-5 pb-20 pt-36 text-white lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <p class="text-sm font-black uppercase text-pink-300">Resource</p>
+          <h1 class="mt-4 max-w-4xl text-5xl leading-none sm:text-6xl lg:text-7xl">Blog/Artikel</h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-gray-300">Baca artikel praktis tentang website, copywriting, marketing, selling, dan aplikasi mobile untuk keputusan bisnis yang lebih tenang.</p>
+        </div>
+      </section>
+
+      <section class="px-5 py-16 lg:px-8 lg:py-20">
+        <div id="articleList" class="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="accent-gradient h-[15px] w-full"></div>
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <p class="font-black">ILTA COM</p>
+        <p class="text-sm text-gray-400">&copy; 2026 ILTA COM. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="articles-data.js"></script>
+    <script>
+      const list = document.getElementById("articleList");
+
+      list.innerHTML = window.ILTA_ARTICLES.map((article) => `
+        <article class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+          <a href="artikel-detail.html?slug=${article.slug}" class="block">
+            <img src="${article.thumbnail}" alt="${article.title}" class="aspect-[16/10] w-full object-cover" loading="lazy" />
+          </a>
+          <div class="p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-pink-50 px-3 py-1 text-xs font-black text-gray-900">${article.category}</span>
+            <span class="text-xs font-bold text-gray-500">${article.readTime}</span>
+          </div>
+          <h2 class="mt-5 text-2xl leading-tight text-gray-950">${article.title}</h2>
+          <p class="mt-4 text-sm leading-6 text-gray-600">${article.excerpt}</p>
+          <a href="artikel-detail.html?slug=${article.slug}" class="mt-6 inline-flex rounded-lg border border-gray-300 bg-white px-5 py-3 text-sm text-gray-950 hover:border-black">
+            Baca artikel
+          </a>
+          </div>
+        </article>
+      `).join("");
+
+      window.addEventListener("load", () => {
+        if (window.lucide) window.lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
