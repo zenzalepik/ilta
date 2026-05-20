@@ -81,6 +81,21 @@
         background-image: linear-gradient(90deg, #000000 0%, #111827 54%, #581c87 100%);
       }
 
+      main section h2::after {
+        content: "";
+        display: block;
+        width: 86px;
+        height: 5px;
+        margin-top: 16px;
+        border-radius: 999px;
+        background-image: linear-gradient(90deg, #ec4899 0%, #9333ea 52%, #22c55e 86%, #38bdf8 100%);
+      }
+
+      main section .text-center h2::after {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .section-square-pattern {
         position: relative;
         overflow: hidden;
@@ -284,7 +299,7 @@
     <header class="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/70 backdrop-blur">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
         <a href="#home" class="flex items-center gap-3" aria-label="ILTA COM">
-          <span class="brand-gradient grid h-10 w-10 place-items-center rounded-lg text-sm font-black text-white">IC</span>
+          <img src="images/ilta_com_logo.png" alt="Logo ILTA COM" class="h-10 w-10 rounded-lg object-contain shadow-sm" />
           <span>
             <span class="block text-base font-black leading-tight">ILTA COM</span>
             <span class="block text-xs font-medium text-gray-500">Website, toko online, custom fitur</span>
@@ -928,32 +943,40 @@
       </section>
 
       <section class="bg-gray-950 py-16 text-white lg:py-20">
-        <div class="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:px-8">
           <div>
-            <p class="text-sm font-black uppercase text-emerald-300">Teknis prototype</p>
-            <h2 class="mt-3 text-3xl font-black sm:text-4xl">Dibuat ringan dengan HTML dan Tailwind CDN.</h2>
-            <p class="mt-4 text-base leading-7 text-gray-300">Cocok untuk preview cepat, validasi desain, dan landing page statis. Jika nanti masuk production besar, struktur ini bisa dipindah ke framework atau build Tailwind lokal.</p>
+            <p class="text-sm font-black uppercase text-emerald-300">Untuk bisnis yang ingin terlihat lebih siap</p>
+            <h2 class="mt-3 text-3xl font-black sm:text-4xl">UMKM Siap Naik Level</h2>
+            <div class="mt-5 grid gap-4 text-base leading-7 text-gray-300">
+              <p>Website bukan hanya tempat menaruh informasi bisnis. Website adalah wajah digital yang membantu calon pelanggan lebih cepat mengenal, memahami, dan percaya kepada usaha Anda.</p>
+              <p>Dengan tampilan yang rapi, struktur konten yang jelas, tombol WhatsApp yang mudah ditemukan, serta halaman yang nyaman dibuka dari HP, bisnis Anda akan terlihat lebih siap, lebih profesional, dan lebih meyakinkan.</p>
+              <p>Untuk UMKM yang ingin naik kelas, website dapat menjadi pusat informasi utama: menampilkan profil usaha, daftar produk atau layanan, lokasi, kontak, galeri, promo, hingga arah komunikasi langsung ke WhatsApp.</p>
+              <p class="font-semibold text-white">Bukan sekadar punya website, tapi punya media digital yang membantu bisnis lebih mudah dipromosikan, lebih mudah dipercaya, dan lebih siap menerima calon pelanggan baru.</p>
+            </div>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
+          <div class="grid gap-4">
             <div class="rounded-lg border border-white/10 bg-white/5 p-5">
-              <i data-lucide="file-code-2" class="h-7 w-7 text-emerald-300"></i>
-              <h3 class="mt-4 font-black">Single HTML</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-300">Mudah dibuka, dipindah, dan dikembangkan.</p>
+              <h3 class="font-black">Cocok Untuk</h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-gray-100">
+                <span class="rounded-full bg-white/10 px-3 py-2">UMKM kuliner</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Toko retail</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Jasa lokal</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Sekolah dan yayasan</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Personal brand</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Bisnis rumahan</span>
+              </div>
             </div>
             <div class="rounded-lg border border-white/10 bg-white/5 p-5">
-              <i data-lucide="layout-template" class="h-7 w-7 text-cyan-300"></i>
-              <h3 class="mt-4 font-black">Komponen rapi</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-300">Section disusun untuk funnel jasa website.</p>
-            </div>
-            <div class="rounded-lg border border-white/10 bg-white/5 p-5">
-              <i data-lucide="mouse-pointer-click" class="h-7 w-7 text-amber-300"></i>
-              <h3 class="mt-4 font-black">CTA jelas</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-300">Tombol konsultasi diarahkan langsung ke WhatsApp.</p>
-            </div>
-            <div class="rounded-lg border border-white/10 bg-white/5 p-5">
-              <i data-lucide="scan-eye" class="h-7 w-7 text-rose-300"></i>
-              <h3 class="mt-4 font-black">Siap dipoles</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-300">Konten, harga, dan portofolio bisa diganti dengan data asli.</p>
+              <h3 class="font-black">Manfaat Utama</h3>
+              <ul class="mt-4 grid gap-3 text-sm font-semibold leading-6 text-gray-200 sm:grid-cols-2">
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Bisnis terlihat lebih kredibel</li>
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Layanan lebih mudah dipahami</li>
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Informasi usaha tersusun rapi</li>
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Calon pelanggan diarahkan ke WhatsApp</li>
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Cocok dibagikan di media promosi</li>
+                <li class="flex gap-2"><i data-lucide="check" class="h-5 w-5 shrink-0 text-pink-300"></i>Meningkatkan kepercayaan sebelum bertanya</li>
+              </ul>
+              <a href="#kontak" class="mt-6 inline-flex rounded-lg bg-white px-5 py-3 text-sm text-gray-950 hover:bg-pink-50">Buat Bisnis Anda Terlihat Lebih Siap Secara Digital</a>
             </div>
           </div>
         </div>
@@ -1023,6 +1046,29 @@
         />
       </section>
 
+      <section class="bg-white py-16 lg:py-20">
+        <div class="mx-auto max-w-5xl px-5 text-center lg:px-8">
+          <p class="text-sm font-black uppercase text-emerald-700">Siap tumbuh lebih serius?</p>
+          <h2 class="mt-3 text-3xl font-black text-gray-950 sm:text-4xl lg:text-5xl">Siap Meluncur Menjemput Peningkatan Penjualan dengan Website?</h2>
+          <div class="mx-auto mt-6 grid max-w-4xl gap-5 text-left text-base leading-7 text-gray-600 md:grid-cols-2">
+            <p>Setiap hari, calon pelanggan bisa saja mencari informasi tentang produk, layanan, sekolah, yayasan, atau bisnis seperti milik Anda. Ketika mereka tidak menemukan informasi yang rapi dan meyakinkan, peluang kepercayaan bisa hilang begitu saja.</p>
+            <p>Website membantu bisnis Anda hadir lebih siap saat calon pelanggan mulai mencari, membandingkan, dan mempertimbangkan pilihan. Dari tampilan pertama, mereka bisa melihat siapa Anda, apa yang Anda tawarkan, bagaimana cara menghubungi Anda, dan kenapa mereka perlu percaya.</p>
+            <p>Dengan website yang tepat, promosi tidak hanya berhenti di postingan media sosial. Anda memiliki halaman utama yang bisa terus dibagikan, dibuka kapan saja, dan menjadi pusat informasi bisnis yang lebih profesional.</p>
+            <p>Saatnya menjadikan website sebagai aset digital yang bekerja untuk bisnis Anda: membantu menjelaskan, meyakinkan, dan mengarahkan calon pelanggan menuju tindakan.</p>
+          </div>
+          <p class="mx-auto mt-8 max-w-3xl text-xl font-semibold leading-8 text-gray-950">Mulai dari satu halaman yang rapi, bisnis Anda bisa terlihat jauh lebih siap untuk tumbuh.</p>
+          <a
+            href="https://wa.me/6281234567890?text=Halo%20ILTA%20COM%2C%20saya%20ingin%20cek%20kebutuhan%20website%20via%20WhatsApp."
+            target="_blank"
+            rel="noopener"
+            class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-gray-950 px-6 py-4 text-white transition hover:bg-gray-800"
+          >
+            <i data-lucide="message-circle" class="h-5 w-5"></i>
+            Cek Kebutuhan Website via WhatsApp
+          </a>
+        </div>
+      </section>
+
       <section class="section-square-pattern bg-gradient-to-br from-yellow-300 via-amber-400 to-orange-500 py-16 lg:py-20" id="kontak">
         <div class="mx-auto max-w-5xl px-5 lg:px-8">
           <div class="accent-gradient rounded-lg p-8 text-white shadow-soft lg:p-12">
@@ -1052,7 +1098,7 @@
       <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
         <div>
           <div class="flex items-center gap-3">
-            <span class="brand-gradient grid h-10 w-10 place-items-center rounded-lg text-sm font-black text-white">IC</span>
+            <img src="images/ilta_com_logo.png" alt="Logo ILTA COM" class="h-10 w-10 rounded-lg object-contain shadow-sm" />
             <span class="font-black">ILTA COM</span>
           </div>
           <p class="mt-4 max-w-md text-sm leading-6 text-gray-400">Jasa pembuatan website company profile, landing page, toko online, website organisasi, custom fitur, dan maintenance.</p>
