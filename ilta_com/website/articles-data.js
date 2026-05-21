@@ -1,137 +1,137 @@
 window.ILTA_ARTICLES = [
   {
-    slug: "kenapa-custom-software-lebih-efektif-daripada-template",
-    category: "Custom Software",
-    readTime: "5 menit baca",
-    title: "Kenapa Custom Software Lebih Efektif Daripada Template untuk Bisnis Enterprise",
-    thumbnail: "assets/articles/custom-software.svg",
-    excerpt: "Template memang cepat, tapi proses bisnis Anda unik. Software yang dirancang khusus mengikuti SOP Anda, bukan sebaliknya.",
-    intro: "Banyak perusahaan memulai dengan software template atau SaaS generik. Seiring bisnis tumbuh, keterbatasan template mulai terasa: fitur tidak sesuai, alur kerja dipaksakan, dan integrasi menjadi rumit.",
-    points: [
-      "Software custom dirancang berdasarkan SOP dan alur kerja unik perusahaan Anda. Tidak ada fitur yang tidak terpakai, tidak ada proses yang dipaksakan.",
-      "Integrasi dengan sistem legacy lebih mudah karena arsitektur bisa disesuaikan. Data mengalir mulus antar departemen tanpa silo informasi.",
-      "Skalabilitas terjamin. Ketika bisnis tumbuh, sistem bisa dikembangkan tanpa harus migrasi ke platform baru."
-    ],
-    closing: "Investasi di custom software bukan soal teknologi, tapi soal efisiensi proses bisnis yang berkelanjutan."
-  },
-  {
-    slug: "tanda-perusahaan-butuh-erp-custom",
-    category: "ERP",
-    readTime: "6 menit baca",
-    title: "5 Tanda Perusahaan Anda Butuh ERP Custom, Bukan SaaS Generik",
-    thumbnail: "assets/articles/erp.svg",
-    excerpt: "Jika spreadsheet jadi tulang punggung operasional dan data tidak pernah sinkron, saatnya mempertimbangkan ERP custom.",
-    intro: "ERP SaaS seperti Odoo atau SAP Business One cocok untuk banyak perusahaan. Tapi ada situasi di mana ERP custom justru lebih tepat — terutama ketika proses bisnis Anda sangat spesifik.",
-    points: [
-      "Data tersebar di berbagai spreadsheet, email, dan sistem berbeda. Keputusan bisnis lambat karena tidak ada single source of truth.",
-      "Proses approval dan workflow tidak bisa diakomodasi oleh ERP standar. Setiap departemen punya cara kerja yang berbeda.",
-      "Integrasi dengan sistem legacy (misalnya mesin produksi atau perangkat khusus) tidak didukung oleh solusi off-the-shelf."
-    ],
-    closing: "ERP custom bukan tentang membangun dari nol. Ini tentang membangun yang tepat untuk cara bisnis Anda bekerja."
-  },
-  {
-    slug: "crm-custom-vs-crm-saas",
-    category: "CRM",
-    readTime: "5 menit baca",
-    title: "CRM Custom vs CRM SaaS: Kapan Harus Beralih?",
-    thumbnail: "assets/articles/crm.svg",
-    excerpt: "CRM SaaS bagus untuk memulai. Tapi ketika pipeline Anda kompleks dan butuh integrasi mendalam, custom CRM jadi pilihan strategis.",
-    intro: "HubSpot, Salesforce, dan Zoho CRM adalah tools yang powerful. Namun ada titik di mana bisnis butuh lebih dari yang bisa ditawarkan CRM standar.",
-    points: [
-      "Pipeline penjualan Anda memiliki tahapan unik yang tidak bisa dipetakan di CRM standar. Setiap industri punya siklus penjualan berbeda.",
-      "Integrasi dengan sistem internal (ERP, inventory, billing) diperlukan secara real-time. API standar tidak cukup.",
-      "Pelaporan dan dashboard harus disesuaikan dengan metrik spesifik perusahaan, bukan template generik."
-    ],
-    closing: "CRM custom bukan pengganti SaaS. Ini evolusi ketika bisnis sudah cukup matang untuk mendefinisikan prosesnya sendiri."
-  },
-  {
-    slug: "integrasi-api-menghubungkan-silo-data",
-    category: "Integrasi",
+    slug: "website-yang-menjual-tidak-harus-berteriak",
+    category: "Website",
     readTime: "4 menit baca",
-    title: "Integrasi API: Cara Menghubungkan Sistem yang Terpisah Tanpa Mengganti Semuanya",
-    thumbnail: "assets/articles/api-integration.svg",
-    excerpt: "Tidak perlu mengganti semua sistem lama. Dengan API yang tepat, data bisa mengalir mulus antar platform yang berbeda.",
-    intro: "Banyak perusahaan memiliki 5-10 sistem berbeda: accounting, HR, inventory, CRM, dan lainnya. Mengganti semuanya sekaligus berisiko tinggi dan mahal.",
+    title: "Website yang Menjual Tidak Selalu Harus Berteriak",
+    thumbnail: "assets/articles/website-selling.svg",
+    excerpt: "Selling yang baik sering dimulai dari rasa aman: pengunjung paham siapa Anda, apa yang ditawarkan, dan langkah berikutnya.",
+    intro: "Website yang menjual bukan berarti website yang penuh tombol, klaim besar, dan kalimat mendesak. Untuk banyak bisnis, halaman yang tenang, jelas, dan bisa dipercaya justru lebih kuat.",
     points: [
-      "API middleware bisa menjadi jembatan antar sistem yang tidak dirancang untuk berkomunikasi. Data disinkronisasi secara otomatis.",
-      "Pendekatan bertahap lebih aman. Mulai dari integrasi yang paling berdampak, misalnya sales ke inventory, atau HR ke payroll.",
-      "Monitoring dan logging penting. Ketika data mengalir antar sistem, Anda perlu tahu jika ada kegagalan sinkronisasi."
+      "Pengunjung datang dengan pertanyaan sederhana: bisnis ini bisa membantu saya atau tidak. Jawab pertanyaan itu secepat mungkin lewat headline, penjelasan layanan, proses, dan bukti yang relevan.",
+      "Hindari menodong pembaca dengan rasa takut. Lebih baik jelaskan masalah yang umum terjadi, lalu tunjukkan bagaimana layanan Anda membantu menguranginya secara realistis.",
+      "CTA yang baik terasa seperti undangan. Misalnya ajakan konsultasi kebutuhan, cek estimasi, atau diskusi fitur. Pembaca tahu apa yang akan terjadi setelah klik."
     ],
-    closing: "Integrasi yang baik terasa invisible. Pengguna tidak perlu tahu ada 5 sistem di belakang layar — yang mereka lihat adalah data yang konsisten."
+    closing: "Saat pengunjung merasa dihormati, mereka lebih mudah percaya. Dari situ, keputusan untuk bertanya atau membeli terasa lebih natural."
   },
   {
-    slug: "prototype-sebelum-develop-kenapa-penting",
-    category: "Proses",
+    slug: "cara-menulis-halaman-jasa-yang-membuat-orang-mengerti",
+    category: "Copywriting",
     readTime: "5 menit baca",
-    title: "Kenapa Prototype dan Requirement Gathering Harus Dilakukan Sebelum Development",
-    thumbnail: "assets/articles/prototype.svg",
-    excerpt: "Banyak proyek software gagal karena langsung coding tanpa memahami kebutuhan. Prototype adalah jembatan antara ide dan eksekusi.",
-    intro: "Salah satu penyebab utama kegagalan proyek software adalah miskomunikasi antara klien dan developer. Prototype dan requirement gathering adalah solusi untuk masalah ini.",
+    title: "Cara Menulis Halaman Jasa yang Membuat Orang Mengerti",
+    thumbnail: "assets/articles/copywriting.svg",
+    excerpt: "Copywriting halaman jasa sebaiknya membuat calon klien merasa dibantu mengambil keputusan, bukan sedang dikejar-kejar.",
+    intro: "Halaman jasa sering gagal bukan karena desainnya buruk, tetapi karena pesannya terlalu fokus pada penyedia jasa. Padahal pembaca ingin memahami apakah layanan itu cocok untuk situasi mereka.",
     points: [
-      "Prototype visual membantu semua pihak melihat produk yang sama. Tidak ada lagi 'saya bayangkannya berbeda' di tengah proyek.",
-      "Requirement gathering yang mendalam mengungkap kebutuhan tersembunyi. Sering kali klien tidak tahu apa yang mereka butuhkan sampai ditanya dengan benar.",
-      "Dokumen requirement yang jelas menjadi kontrak tidak tertulis. Scope creep bisa dihindari karena semua fitur sudah disepakati di awal."
+      "Mulai dari kondisi calon klien. Sebutkan gejala yang mereka kenal, seperti website lama sulit diedit, tampilan kurang meyakinkan, atau calon pelanggan bingung mencari informasi.",
+      "Setelah itu baru jelaskan solusi. Gunakan bahasa yang mudah dipahami, bukan istilah teknis yang membuat pembaca merasa tertinggal.",
+      "Susun urutan copy dengan rapi: masalah, solusi, proses, paket, FAQ, lalu CTA. Urutan ini membuat pembaca merasa punya kendali sebelum menghubungi Anda."
     ],
-    closing: "Waktu yang dihabiskan untuk prototype dan requirement gathering menghemat berbulan-bulan development yang salah arah."
+    closing: "Copywriting yang baik tidak terasa seperti rayuan keras. Ia terasa seperti seseorang yang membantu pembaca melihat pilihan dengan lebih jelas."
   },
   {
-    slug: "keamanan-data-iso-27001",
-    category: "Security",
-    readTime: "6 menit baca",
-    title: "Mengapa ISO 27001 Penting untuk Vendor Software yang Anda Pilih",
-    thumbnail: "assets/articles/security.svg",
-    excerpt: "ISO 27001 bukan sekadar sertifikat. Ini bukti bahwa vendor memiliki proses keamanan data yang teruji dan terdokumentasi.",
-    intro: "Ketika Anda mempercayakan data bisnis ke vendor software, keamanan bukan fitur tambahan — ini fondasi. ISO 27001 adalah standar internasional untuk manajemen keamanan informasi.",
-    points: [
-      "ISO 27001 mencakup 114 kontrol keamanan yang mencakup aspek teknis, fisik, dan organisasi. Bukan hanya firewall dan enkripsi.",
-      "Audit berkala memastikan kepatuhan. Sertifikasi bukan sekali dapat, tapi harus dipertahankan melalui audit rutin.",
-      "Untuk perusahaan yang menangani data sensitif (keuangan, kesehatan, pemerintah), ISO 27001 sering menjadi syarat wajib dalam tender."
-    ],
-    closing: "Memilih vendor ber-ISO 27001 bukan soal prestige. Ini soal memastikan data Anda ditangani oleh organisasi yang serius tentang keamanan."
-  },
-  {
-    slug: "agile-vs-waterfall-software-development",
-    category: "Metodologi",
-    readTime: "5 menit baca",
-    title: "Agile vs Waterfall: Metodologi Mana yang Tepat untuk Proyek Software Anda?",
-    thumbnail: "assets/articles/agile.svg",
-    excerpt: "Waterfall cocok untuk proyek dengan requirement jelas. Agile lebih baik ketika kebutuhan bisa berubah selama development.",
-    intro: "Pemilihan metodologi development berdampak langsung pada timeline, budget, dan kualitas produk. Memahami perbedaan keduanya membantu Anda memilih vendor yang tepat.",
-    points: [
-      "Waterfall bekerja baik ketika requirement sudah final dan tidak akan berubah. Cocok untuk proyek regulasi atau compliance yang ketat.",
-      "Agile memungkinkan iterasi dan feedback berkala. Klien melihat progress setiap 2-3 minggu dan bisa menyesuaikan prioritas.",
-      "Vendor yang baik bisa menjelaskan metodologi mereka dan mengapa itu cocok untuk jenis proyek Anda. Tidak ada satu jawaban benar untuk semua."
-    ],
-    closing: "Yang penting bukan metodologinya, tapi transparansi. Anda harus selalu tahu apa yang sedang dikerjakan dan kapan akan selesai."
-  },
-  {
-    slug: "maintenance-software-setelah-go-live",
-    category: "Maintenance",
+    slug: "marketing-halus-untuk-bisnis-lokal",
+    category: "Marketing",
     readTime: "4 menit baca",
-    title: "Go-Live Bukan Akhir: Mengapa Maintenance Software Justru Baru Dimulai",
-    thumbnail: "assets/articles/maintenance.svg",
-    excerpt: "Banyak perusahaan kaget setelah go-live. Bug muncul, user butuh training, dan fitur tambahan diminta. SLA maintenance yang jelas adalah kunci.",
-    intro: "Launch software adalah milestone besar, tapi bukan akhir perjalanan. Sistem yang baik membutuhkan pemeliharaan rutin, update keamanan, dan penyesuaian berdasarkan feedback pengguna.",
+    title: "Marketing Halus untuk Bisnis Lokal yang Ingin Terlihat Profesional",
+    thumbnail: "assets/articles/marketing.svg",
+    excerpt: "Bisnis lokal bisa terlihat lebih siap tanpa harus memakai bahasa promosi yang terlalu ramai atau memaksa.",
+    intro: "Marketing halus bukan berarti lemah. Justru untuk bisnis lokal, pendekatan yang rapi dan manusiawi sering lebih dipercaya daripada promosi yang terlalu keras.",
     points: [
-      "SLA maintenance harus mencakup response time, resolution time, dan jam dukungan. Tanpa SLA, Anda tidak punya jaminan layanan.",
-      "Update keamanan rutin penting. Library dan framework yang digunakan software perlu di-update untuk mencegah kerentanan.",
-      "Feedback pengguna setelah go-live sering mengungkap kebutuhan yang tidak teridentifikasi di fase development. Maintenance yang baik mengakomodasi ini."
+      "Tampilkan informasi yang membuat orang yakin: area layanan, jam operasional, kontak aktif, proses order, contoh hasil, dan jawaban untuk pertanyaan umum.",
+      "Gunakan visual yang relevan. Foto tempat, produk, proses kerja, atau hasil nyata biasanya lebih meyakinkan daripada gambar yang terlalu generik.",
+      "Bangun pesan yang konsisten. Jika website, WhatsApp, dan materi penawaran menggunakan bahasa yang selaras, bisnis terasa lebih serius."
     ],
-    closing: "Partner software yang baik tidak menghilang setelah go-live. Mereka menjadi bagian dari tim Anda untuk memastikan sistem terus berkembang."
+    closing: "Kredibilitas sering tumbuh dari detail kecil yang konsisten. Marketing tidak selalu perlu berisik untuk bekerja."
   },
   {
-    slug: "digital-transformasi-pemerintahan",
-    category: "Government",
+    slug: "cta-yang-mengundang-bukan-menodong",
+    category: "Selling",
+    readTime: "5 menit baca",
+    title: "CTA yang Mengundang, Bukan Menodong",
+    thumbnail: "assets/articles/cta.svg",
+    excerpt: "CTA yang tepat memberi arah tanpa membuat pengunjung merasa dipaksa mengambil keputusan saat itu juga.",
+    intro: "CTA adalah pintu menuju langkah berikutnya. Masalahnya, banyak CTA dibuat terlalu menekan sehingga pembaca merasa sedang dipaksa, bukan dibantu.",
+    points: [
+      "Gunakan kalimat yang menjelaskan aksi dan manfaatnya. Contoh: konsultasi kebutuhan website, minta estimasi, atau diskusi fitur aplikasi.",
+      "Letakkan CTA setelah pembaca mendapat konteks. CTA yang muncul sebelum informasi penting sering terasa buru-buru.",
+      "Buat ekspektasi jelas. Jika tombol menuju WhatsApp, beri pesan awal yang spesifik agar calon klien tahu percakapan akan dimulai dari mana."
+    ],
+    closing: "CTA yang baik tidak memaksa orang membeli. Ia membantu orang yang sudah tertarik untuk mengambil langkah kecil yang aman."
+  },
+  {
+    slug: "landing-page-vs-company-profile",
+    category: "Strategi",
+    readTime: "6 menit baca",
+    title: "Landing Page vs Company Profile: Pilih yang Mana?",
+    thumbnail: "assets/articles/landing-page.svg",
+    excerpt: "Salah pilih format website bisa membuat pesan bisnis melebar. Pilih berdasarkan tujuan, bukan sekadar tren desain.",
+    intro: "Landing page dan company profile sama-sama berguna, tetapi tugasnya berbeda. Memilih format yang tepat akan membuat website lebih fokus.",
+    points: [
+      "Landing page cocok untuk satu penawaran spesifik, seperti promo, event, produk baru, kelas, atau jasa utama yang ingin cepat dijelaskan.",
+      "Company profile cocok untuk bisnis yang perlu menjelaskan profil, legalitas, banyak layanan, portofolio, tim, dan informasi kontak secara lengkap.",
+      "Jika calon pelanggan belum mengenal brand Anda, company profile membantu membangun konteks. Jika mereka sudah datang karena satu kebutuhan, landing page bisa lebih tajam."
+    ],
+    closing: "Website yang efektif tidak harus rumit. Yang penting formatnya sesuai dengan tujuan bisnis dan cara calon pelanggan mengambil keputusan."
+  },
+  {
+    slug: "hal-kecil-yang-menaikkan-kepercayaan-website",
+    category: "Trust",
+    readTime: "4 menit baca",
+    title: "Hal Kecil di Website yang Diam-diam Menaikkan Kepercayaan",
+    thumbnail: "assets/articles/trust.svg",
+    excerpt: "Kepercayaan tidak hanya dibangun dari desain mahal. Detail kecil yang konsisten sering lebih terasa oleh pengunjung.",
+    intro: "Pengunjung jarang mengatakan bahwa mereka percaya karena satu elemen saja. Biasanya kepercayaan muncul dari kumpulan detail kecil yang terasa rapi.",
+    points: [
+      "Pastikan kontak mudah ditemukan. Nomor WhatsApp, alamat, email, dan jam operasional membantu pengunjung merasa bisnis ini nyata.",
+      "Buat halaman layanan yang jelas. Jelaskan apa yang termasuk, apa yang tidak termasuk, dan bagaimana proses kerja biasanya berjalan.",
+      "Tambahkan FAQ sederhana. FAQ mengurangi pertanyaan berulang dan membantu pembaca merasa kebutuhannya sudah dipikirkan."
+    ],
+    closing: "Website yang dipercaya bukan hanya yang indah, tetapi yang membuat orang tidak perlu menebak-nebak."
+  },
+  {
+    slug: "kapan-bisnis-perlu-aplikasi-mobile",
+    category: "Mobile App",
+    readTime: "6 menit baca",
+    title: "Kapan Bisnis Perlu Aplikasi Mobile, Bukan Sekadar Website?",
+    thumbnail: "assets/articles/mobile-app.svg",
+    excerpt: "Aplikasi mobile masuk akal saat pelanggan perlu kembali berkali-kali, menyimpan data, atau memakai fitur yang lebih personal.",
+    intro: "Tidak semua bisnis perlu aplikasi mobile. Namun dalam situasi tertentu, aplikasi bisa menjadi alat retensi yang lebih kuat dibanding website biasa.",
+    points: [
+      "Website bagus untuk ditemukan, dijelaskan, dan dipercaya. Aplikasi mobile lebih kuat ketika pelanggan perlu login, menyimpan riwayat, mendapat notifikasi, atau melakukan aktivitas berulang.",
+      "Contoh kebutuhan yang cocok untuk app: booking rutin, membership, poin loyalti, katalog favorit, status pesanan, kelas online, atau layanan pelanggan personal.",
+      "Pertanyaan utamanya bukan apakah bisnis bisa punya aplikasi, tetapi apakah pelanggan punya alasan untuk membuka aplikasi itu lebih dari sekali."
+    ],
+    closing: "Jika aplikasi membantu pelanggan kembali dan berinteraksi lebih mudah, app layak dipetakan. Jika belum, website atau web app bisa menjadi langkah awal."
+  },
+  {
+    slug: "fitur-aplikasi-mobile-yang-membantu-pelanggan-balik-lagi",
+    category: "Mobile App",
+    readTime: "5 menit baca",
+    title: "Fitur Aplikasi Mobile yang Membantu Pelanggan Balik Lagi",
+    thumbnail: "assets/articles/mobile-features.svg",
+    excerpt: "App tidak harus besar di awal. Fitur kecil yang tepat bisa membuat pengalaman pelanggan terasa lebih mudah.",
+    intro: "Aplikasi mobile yang baik tidak selalu dimulai dari fitur banyak. Sering kali, satu alur utama yang sangat berguna lebih bernilai.",
+    points: [
+      "Untuk bisnis jasa, fitur booking, reminder, status layanan, dan riwayat pesanan bisa membuat pelanggan merasa lebih terlayani.",
+      "Untuk retail, fitur katalog favorit, voucher, poin, notifikasi stok, dan riwayat transaksi bisa memberi alasan pelanggan kembali.",
+      "Jangan memasukkan semua ide di versi awal. Pilih fitur yang paling sering dipakai dan paling dekat dengan tujuan bisnis."
+    ],
+    closing: "App yang fokus lebih mudah dipahami, lebih cepat diuji, dan lebih realistis untuk dikembangkan bertahap."
+  },
+  {
+    slug: "validasi-ide-aplikasi-mobile-sebelum-budget-besar",
+    category: "Mobile App",
     readTime: "7 menit baca",
-    title: "Tantangan dan Peluang Digital Transformasi di Instansi Pemerintah",
-    thumbnail: "assets/articles/government.svg",
-    excerpt: "Digitalisasi pemerintahan bukan soal teknologi saja. Ini tentang perubahan proses, budaya kerja, dan pelayanan publik yang lebih baik.",
-    intro: "Instansi pemerintah di Indonesia semakin didorong untuk bertransformasi digital. Tantangannya unik: regulasi ketat, anggaran terbatas, dan kebutuhan akan transparansi yang tinggi.",
+    title: "Validasi Ide Aplikasi Mobile Sebelum Keluar Budget Besar",
+    thumbnail: "assets/articles/mobile-validation.svg",
+    excerpt: "Sebelum membuat aplikasi lengkap, bisnis bisa menguji kebutuhan lewat prototype, landing page, atau versi fitur paling sederhana.",
+    intro: "Aplikasi mobile membutuhkan waktu dan biaya. Karena itu, validasi ide sebelum membangun versi lengkap adalah langkah yang sehat.",
     points: [
-      "Kepatuhan regulasi adalah prioritas. Sistem harus memenuhi standar audit, data sovereignty, dan aksesibilitas untuk publik.",
-      "Perubahan budaya kerja sering lebih sulit dari implementasi teknis. Training dan change management sama pentingnya dengan kode yang baik.",
-      "Kolaborasi dengan vendor yang berpengalaman di sektor pemerintah mempercepat proses. Mereka sudah memahami regulasi dan proses procurement."
+      "Mulai dengan satu masalah utama. Tulis siapa penggunanya, kapan masalah terjadi, dan bagaimana aplikasi akan membantu mereka.",
+      "Uji minat lewat landing page, prototype, form pemesanan, atau web app sederhana. Tujuannya melihat apakah orang benar-benar mau memakai solusinya.",
+      "Setelah ada sinyal penggunaan, baru tentukan fitur inti, prioritas rilis, dan ukuran sukses seperti jumlah booking, transaksi, atau pengguna aktif."
     ],
-    closing: "Digital transformasi di pemerintahan bukan proyek IT. Ini adalah transformasi pelayanan publik yang didukung oleh teknologi."
+    closing: "Validasi bukan memperlambat. Validasi membantu bisnis membangun aplikasi dengan keputusan yang lebih tenang dan budget yang lebih masuk akal."
   }
 ];
