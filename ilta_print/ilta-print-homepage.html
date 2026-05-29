@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ILTA PRINT - Digital Printing Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ilta:'#063d2d', ilta2:'#082f25', oren:'#f59b22', soft:'#f6f7f3', pink:'#ec2b83', sky:'#18a8e7' },
+          boxShadow:{ soft:'0 18px 45px rgba(0,0,0,.08)', deep:'0 25px 70px rgba(0,60,45,.18)' },
+          borderRadius:{ blob:'42px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    *{font-family:Inter,system-ui,sans-serif} body{background:#fbfcfa;color:#0b1713}.grain{background-image:radial-gradient(#063d2d12 1px,transparent 1px);background-size:18px 18px}.tilt{transform:rotate(-2deg)}.tilt2{transform:rotate(2deg)}.text-stroke{-webkit-text-stroke:1px #063d2d;color:transparent}.clip{clip-path:polygon(0 0,100% 0,92% 100%,0 100%)}.clip-r{clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <main class="relative mx-auto max-w-[1440px] bg-white overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none grain opacity-50"></div>
+    <div class="absolute -top-20 right-0 w-[480px] h-[480px] bg-orange-100 rounded-full blur-3xl opacity-60"></div>
+    <div class="absolute top-[480px] -left-48 w-[520px] h-[520px] bg-emerald-100 rounded-full blur-3xl opacity-60"></div>
+
+    <!-- HEADER -->
+    <header class="relative z-20 px-8 md:px-14 pt-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo_ilta_print_2.png" class="w-14 h-14 object-contain rounded-xl" />
+        <div class="leading-none">
+          <div class="text-3xl font-black tracking-tight text-ilta">ILTA<span class="text-oren">P</span></div>
+          <div class="tracking-[.42em] text-xs font-bold">PRINT</div>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center gap-2 bg-white/90 backdrop-blur rounded-full px-4 py-3 shadow-soft border border-gray-100">
+        <a class="px-5 py-2 rounded-full font-semibold text-sm bg-gray-50" href="#">Beranda</a><a class="px-5 py-2 rounded-full font-semibold text-sm" href="#produk">Produk</a><a class="px-5 py-2 rounded-full font-semibold text-sm" href="#layanan">Layanan</a><a class="px-5 py-2 rounded-full font-semibold text-sm" href="#portfolio">Portofolio</a><a class="px-5 py-2 rounded-full font-semibold text-sm" href="#faq">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="w-12 h-12 rounded-full bg-ilta text-white grid place-items-center shadow-deep">🛒</button>
+        <a class="hidden sm:flex items-center gap-2 bg-ilta text-white px-5 py-3 rounded-full font-bold shadow-deep" href="#">Konsultasi Order <span class="bg-white text-ilta rounded-full w-7 h-7 grid place-items-center">→</span></a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative z-10 grid lg:grid-cols-2 gap-10 px-8 md:px-14 pt-16 pb-8 items-center min-h-[680px]">
+      <div>
+        <div class="inline-flex tilt items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-oren font-black text-xs uppercase tracking-widest border border-orange-200">Digital Printing Solution</div>
+        <h1 class="mt-8 text-[54px] md:text-[86px] leading-[.92] font-black tracking-tight text-ilta uppercase">Cetak Ide<br><span class="text-oren">Wujudkan</span><br>Brand<br>Lebih Nyata</h1>
+        <p class="mt-7 max-w-lg text-lg text-gray-600 leading-relaxed">Solusi cetak lengkap untuk kebutuhan promosi, bisnis, event, dan personal. Kualitas terbaik, hasil tajam, warna cerah, dan pengerjaan cepat.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a class="bg-ilta text-white px-7 py-4 rounded-full font-bold shadow-deep inline-flex items-center gap-3" href="#">Konsultasi via WhatsApp <span>☘</span></a>
+          <a class="bg-white border border-gray-200 px-7 py-4 rounded-full font-bold shadow-soft inline-flex items-center gap-3" href="#produk">Lihat Produk <span>→</span></a>
+        </div>
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl">
+          <div class="bg-white rounded-2xl p-4 border shadow-soft"><b>5000+</b><p class="text-xs text-gray-500">Project Selesai</p></div>
+          <div class="bg-white rounded-2xl p-4 border shadow-soft"><b>100%</b><p class="text-xs text-gray-500">Kualitas Terjamin</p></div>
+          <div class="bg-white rounded-2xl p-4 border shadow-soft"><b>Fast</b><p class="text-xs text-gray-500">Produksi Cepat</p></div>
+          <div class="bg-white rounded-2xl p-4 border shadow-soft"><b>Seluruh</b><p class="text-xs text-gray-500">Indonesia</p></div>
+        </div>
+      </div>
+      <div class="relative min-h-[520px]">
+        <div class="absolute right-0 top-0 w-[74%] h-[82%] bg-ilta rounded-[80px] opacity-95"></div>
+        <div class="absolute right-4 top-10 w-[60%] h-[60%] border-[24px] border-oren rounded-full opacity-90"></div>
+        <img src="ilta_assets/hero_products.png" class="absolute right-0 top-2 w-full max-w-[650px] drop-shadow-2xl rounded-[38px]" />
+        <div class="absolute -bottom-4 right-6 bg-oren rounded-[36px] w-52 h-28"></div>
+        <div class="absolute bottom-24 -left-8 bg-white rounded-3xl shadow-deep p-5 border border-gray-100 tilt2"><b class="text-ilta">Think</b><br><span class="text-oren font-black">Create</span><br><b>Print Repeat</b></div>
+      </div>
+    </section>
+
+    <!-- NEEDS -->
+    <section id="layanan" class="relative z-10 bg-ilta text-white rounded-t-[64px] rounded-b-[64px] px-8 md:px-14 py-20 my-8 overflow-hidden">
+      <div class="absolute right-0 top-0 w-64 h-64 bg-oren rounded-full blur-3xl opacity-50"></div>
+      <div class="mb-10"><h2 class="text-4xl md:text-5xl font-black uppercase">Pilih <span class="text-oren">Kebutuhanmu</span></h2><p class="mt-3 text-emerald-100">Temukan produk yang sesuai dengan kebutuhanmu dengan mudah dan cepat.</p></div>
+      <div class="grid md:grid-cols-3 xl:grid-cols-6 gap-5">
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60 relative overflow-hidden"><h3 class="font-black text-lg">Promosi</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>Banner</li><li>X Banner</li><li>Roll Banner</li><li>Umbul Umbul</li></ul><button class="absolute bottom-5 left-5 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60"><h3 class="font-black text-lg">Produk Jualan</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>Stiker Label</li><li>Packaging</li><li>Hangtag</li><li>Label Produk</li></ul><button class="mt-8 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60"><h3 class="font-black text-lg">Merchandise</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>Tumbler</li><li>Mug</li><li>Pin</li><li>Gantungan Kunci</li></ul><button class="mt-8 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60"><h3 class="font-black text-lg">Event & Komunitas</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>Backdrop</li><li>Tiket</li><li>Lanyard</li><li>ID Card</li></ul><button class="mt-8 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60"><h3 class="font-black text-lg">Kaos & Apparel</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>DTF</li><li>Sablon</li><li>Jersey</li><li>Seragam</li></ul><button class="mt-8 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+        <div class="bg-white text-black rounded-[30px] p-6 shadow-soft min-h-60"><h3 class="font-black text-lg">Acrylic & Plakat</h3><ul class="mt-4 text-sm text-gray-600 space-y-2"><li>Acrylic Sign</li><li>Neon Box</li><li>Plakat</li><li>QR Menu</li></ul><button class="mt-8 w-10 h-10 rounded-full bg-ilta text-white">→</button></div>
+      </div>
+    </section>
+
+    <!-- HYPE -->
+    <section id="produk" class="relative z-10 px-8 md:px-14 py-14">
+      <div class="flex items-end justify-between mb-8"><h2 class="text-4xl font-black uppercase text-ilta">Produk Terbaru<br><span class="text-oren">& Lagi Hype!</span></h2><button class="border rounded-full px-5 py-3 font-bold">Lihat Semua →</button></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-5">
+        <script>const items=['Acrylic UV Print','Hologram Sticker','DTF Transfer Sheet','Acrylic QR Menu','UV DTF Sticker','Standing Pouch Label','Acrylic Photo Stand'];document.currentScript.insertAdjacentHTML('beforebegin',items.map((x,i)=>`<article class="bg-white rounded-3xl border shadow-soft overflow-hidden"><div class="h-36 bg-gradient-to-br ${i%2?'from-ilta to-black':'from-orange-100 to-white'} grid place-items-center text-5xl">${['▣','◉','▥','▤','✦','▰','▧'][i]}</div><div class="p-4"><span class="text-xs bg-oren text-white px-2 py-1 rounded-full font-black">NEW</span><h3 class="mt-3 font-black text-sm">${x}</h3><p class="text-xs text-gray-500 mt-1">Tampilan premium & modern</p></div></article>`).join(''));</script>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="relative z-10 px-8 md:px-14 py-12">
+      <div class="flex items-end justify-between mb-8"><h2 class="text-4xl font-black uppercase text-ilta">Solusi Cetak<br>Berdasarkan <span class="text-oren">Anda</span></h2><button class="border rounded-full px-5 py-3 font-bold">Lihat Semua Solusi →</button></div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-[32px] p-7 border shadow-soft"><div class="text-4xl">🏪</div><h3 class="mt-4 font-black">Untuk UMKM</h3><ul class="mt-3 text-sm text-gray-600 space-y-2"><li>Stiker Label</li><li>Packaging & Label</li><li>Standing Pouch</li><li>Banner Toko</li></ul></div>
+        <div class="bg-white rounded-[32px] p-7 border shadow-soft"><div class="text-4xl">🎓</div><h3 class="mt-4 font-black">Untuk Sekolah</h3><ul class="mt-3 text-sm text-gray-600 space-y-2"><li>Pamflet</li><li>Spanduk</li><li>Buku Tahunan</li><li>Mading</li></ul></div>
+        <div class="bg-white rounded-[32px] p-7 border shadow-soft"><div class="text-4xl">🎫</div><h3 class="mt-4 font-black">Untuk Event</h3><ul class="mt-3 text-sm text-gray-600 space-y-2"><li>Backdrop</li><li>ID Card</li><li>Lanyard</li><li>Merchandise</li></ul></div>
+        <div class="bg-white rounded-[32px] p-7 border shadow-soft"><div class="text-4xl">🏢</div><h3 class="mt-4 font-black">Untuk Perusahaan</h3><ul class="mt-3 text-sm text-gray-600 space-y-2"><li>Company Profile</li><li>Merchandise</li><li>Plakat</li><li>Branding Kantor</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section class="relative z-10 px-8 md:px-14 py-12">
+      <div class="bg-ilta rounded-[44px] p-8 md:p-12 text-white shadow-deep overflow-hidden relative">
+        <div class="absolute right-0 bottom-0 w-80 h-80 bg-oren rounded-full blur-3xl opacity-40"></div>
+        <h2 class="text-3xl md:text-5xl font-black uppercase mb-8">Cara Order / Pemesanan</h2>
+        <div class="grid md:grid-cols-5 gap-5 relative z-10">
+          <div class="border border-white/20 rounded-3xl p-6 bg-white/5"><b class="bg-orange-500 rounded-full px-3 py-2">01</b><h3 class="font-black mt-6">Konsultasi</h3><p class="text-sm text-emerald-100 mt-2">Sampaikan kebutuhan via WhatsApp.</p></div>
+          <div class="border border-white/20 rounded-3xl p-6 bg-white/5"><b class="bg-yellow-400 text-black rounded-full px-3 py-2">02</b><h3 class="font-black mt-6">Kirim File / Desain</h3><p class="text-sm text-emerald-100 mt-2">Kirim desain atau minta bantuan desain.</p></div>
+          <div class="border border-white/20 rounded-3xl p-6 bg-white/5"><b class="bg-green-500 rounded-full px-3 py-2">03</b><h3 class="font-black mt-6">Preview & ACC</h3><p class="text-sm text-emerald-100 mt-2">Kami kirim preview sebelum cetak.</p></div>
+          <div class="border border-white/20 rounded-3xl p-6 bg-white/5"><b class="bg-sky-500 rounded-full px-3 py-2">04</b><h3 class="font-black mt-6">Proses Cetak</h3><p class="text-sm text-emerald-100 mt-2">Diproduksi dengan mesin modern.</p></div>
+          <div class="border border-white/20 rounded-3xl p-6 bg-white/5"><b class="bg-blue-500 rounded-full px-3 py-2">05</b><h3 class="font-black mt-6">Pengiriman / Ambil</h3><p class="text-sm text-emerald-100 mt-2">Dikirim atau ambil di tempat.</p></div>
+        </div>
+        <div class="mt-8 bg-white/10 border border-white/15 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-5 relative z-10"><div><h3 class="text-2xl font-black">Butuh Bantuan?</h3><p class="text-emerald-100">Tim kami siap membantu kebutuhan cetakmu.</p></div><a class="bg-white text-ilta px-6 py-4 rounded-full font-black" href="#">Chat WhatsApp</a></div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="relative z-10 px-8 md:px-14 py-12">
+      <h2 class="text-center text-4xl font-black uppercase text-ilta mb-10">Kenapa Memilih <span class="text-oren">ILTA PRINT?</span></h2>
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-5 text-center">
+        <div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">🏭</div><b>Mesin Modern</b><p class="text-xs text-gray-500 mt-2">Hasil cetak tajam</p></div><div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">🎨</div><b>Warna Akurat</b><p class="text-xs text-gray-500 mt-2">Tajam & tahan lama</p></div><div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">✍</div><b>Desain Dibantu</b><p class="text-xs text-gray-500 mt-2">Tim kreatif siap</p></div><div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">🚚</div><b>Pengiriman</b><p class="text-xs text-gray-500 mt-2">Seluruh Indonesia</p></div><div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">💰</div><b>Harga Kompetitif</b><p class="text-xs text-gray-500 mt-2">Kualitas premium</p></div><div class="p-6 bg-white rounded-3xl border shadow-soft"><div class="text-3xl">🛡</div><b>Garansi Revisi</b><p class="text-xs text-gray-500 mt-2">File sampai sesuai</p></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="relative z-10 px-8 md:px-14 py-12">
+      <div class="flex justify-between items-end mb-8"><h2 class="text-4xl font-black uppercase text-ilta">Portofolio <span class="text-oren">Hasil Cetak</span></h2><button class="border rounded-full px-5 py-3 font-bold">Lihat Semua Portofolio →</button></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <script>document.currentScript.insertAdjacentHTML('beforebegin',Array.from({length:8}).map((_,i)=>`<div class="h-32 rounded-2xl overflow-hidden shadow-soft border bg-gradient-to-br ${i%2?'from-ilta to-black':'from-orange-100 to-white'} grid place-items-center text-4xl text-white">${['▰','▣','◉','✦','▥','▤','⬢','◆'][i]}</div>`).join(''));</script>
+      </div>
+    </section>
+
+    <!-- FAQ + CTA -->
+    <section id="faq" class="relative z-10 px-8 md:px-14 py-12">
+      <h2 class="text-3xl font-black uppercase mb-6">Pertanyaan yang Sering Diajukan</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <details class="bg-white border rounded-2xl p-5 shadow-soft"><summary class="font-bold">Apakah bisa desain dari nol?</summary><p class="mt-3 text-gray-600">Bisa. Tim desain kami dapat membantu dari konsep awal.</p></details>
+        <details class="bg-white border rounded-2xl p-5 shadow-soft"><summary class="font-bold">Berapa lama proses pengerjaan?</summary><p class="mt-3 text-gray-600">Tergantung produk dan jumlah pesanan.</p></details>
+        <details class="bg-white border rounded-2xl p-5 shadow-soft"><summary class="font-bold">Apakah bisa cetak satuan?</summary><p class="mt-3 text-gray-600">Bisa untuk beberapa jenis produk.</p></details>
+        <details class="bg-white border rounded-2xl p-5 shadow-soft"><summary class="font-bold">Apakah bisa kirim luar kota?</summary><p class="mt-3 text-gray-600">Bisa, pengiriman ke seluruh Indonesia.</p></details>
+      </div>
+      <div class="mt-12 bg-black rounded-[42px] text-white p-10 md:p-14 flex flex-col lg:flex-row justify-between gap-8 items-center overflow-hidden relative"><div class="absolute left-0 bottom-0 w-72 h-72 bg-pink-600 rounded-full blur-3xl opacity-50"></div><div class="relative z-10"><h2 class="text-4xl font-black uppercase">Siap Mencetak <span class="text-oren">Ide</span> Berikutnya?</h2><p class="mt-3 text-gray-300">Konsultasikan kebutuhan desain dan cetakmu sekarang.</p></div><a class="relative z-10 bg-pink text-white px-8 py-4 rounded-full font-black" href="#">Chat WhatsApp Sekarang</a></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 bg-[#07110e] text-white px-8 md:px-14 py-12 mt-8">
+      <div class="grid md:grid-cols-5 gap-10"><div class="md:col-span-2"><div class="text-3xl font-black">ILTA<span class="text-oren">P</span> PRINT</div><p class="mt-4 text-gray-400 max-w-sm">Solusi cetak digital untuk kebutuhan promosi, branding, dan produk custom Anda.</p></div><div><b>Produk</b><ul class="mt-4 text-gray-400 space-y-2 text-sm"><li>Spanduk</li><li>Stiker Label</li><li>Merchandise</li><li>Kaos & Apparel</li></ul></div><div><b>Bantuan</b><ul class="mt-4 text-gray-400 space-y-2 text-sm"><li>Cara Order</li><li>FAQ</li><li>Syarat & Ketentuan</li><li>Kontak Kami</li></ul></div><div><b>Hubungi Kami</b><ul class="mt-4 text-gray-400 space-y-2 text-sm"><li>0812-3456-7890</li><li>hello@iltaprint.com</li><li>Pekanbaru, Riau</li></ul></div></div><div class="border-t border-white/10 mt-10 pt-6 text-sm text-gray-500">© 2024 ILTA PRINT. All rights reserved.</div>
+    </footer>
+  </main>
+</body>
+</html>
