@@ -1,0 +1,7 @@
+baseURL = "https://iltaprint.com/"
+languageCode = "id-id"
+title = "ILTA PRINT"
+
+[params]
+  description = "Solusi cetak digital untuk kebutuhan promosi, branding, dan produk custom."
+  whatsapp = "0851-8336-9972"
