@@ -1,7 +1,31 @@
 baseURL = "https://iltaprint.com/"
-languageCode = "id-id"
+locale = "id-ID"
 title = "ILTA PRINT"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+summaryLength = 28
 
 [params]
   description = "Solusi cetak digital untuk kebutuhan promosi, branding, dan produk custom."
   whatsapp = "0851-8336-9972"
+  author = "ILTA PRINT"
+  logo = "/logo_ilta_print_2.png"
+  defaultImage = "/logo_ilta_print_2.png"
+  articleDefaultImage = "/ilta_assets/hero_products.png"
+  address = "Jl. Masjid, RT.01/RW.08, Dusun Sumberwinong, Banjar Dowo, Kec. Jombang, Kabupaten Jombang, Jawa Timur 61419"
+  addressURL = "https://share.google/XzID4Zifqdv41XWaC"
+  email = "hello@iltaprint.com"
+  businessType = "LocalBusiness"
+  areaServed = "Indonesia"
+  keywords = [
+    "digital printing",
+    "digital printing Jombang",
+    "ILTA PRINT",
+    "cetak banner",
+    "cetak stiker label",
+    "cetak packaging",
+    "merchandise custom",
+    "kaos DTF",
+    "desain grafis promosi",
+    "branding UMKM"
+  ]

@@ -1,0 +1,124 @@
+{{- $title := .Title -}}
+{{- with .Params.seoTitle }}{{ $title = . }}{{ end -}}
+{{- $fullTitle := cond .IsHome $title (printf "%s | %s" $title .Site.Title) -}}
+{{- $description := .Params.description | default .Summary | default .Site.Params.description | plainify | htmlUnescape | truncate 160 -}}
+{{- $canonical := .Permalink -}}
+{{- $isArticle := and (eq .Section "artikel") .IsPage -}}
+{{- $isProduct := and (hasPrefix .RelPermalink "/produk/") .IsPage -}}
+{{- $isPortfolio := and (hasPrefix .RelPermalink "/portfolio/") .IsPage -}}
+{{- $isCart := hasPrefix .RelPermalink "/cart/" -}}
+{{- $fallbackImage := .Site.Params.defaultImage -}}
+{{- if eq .Section "artikel" }}{{ $fallbackImage = .Site.Params.articleDefaultImage | default .Site.Params.defaultImage }}{{ end -}}
+{{- if eq .Section "produk" }}{{ $fallbackImage = .Site.Params.articleDefaultImage | default .Site.Params.defaultImage }}{{ end -}}
+{{- if eq .Section "portfolio" }}{{ $fallbackImage = "/ilta_assets/portfolio_strip.png" }}{{ end -}}
+{{- $image := .Params.image | default $fallbackImage | absURL -}}
+{{- $imageAlt := .Params.imageAlt | default (printf "%s - %s" $title .Site.Title) -}}
+{{- $sectionName := cond .IsHome "Beranda" (.Section | default .Title | title) -}}
+{{- $keywords := slice -}}
+{{- range .Site.Params.keywords }}{{ $keywords = $keywords | append . }}{{ end -}}
+{{- with .Params.keywords }}{{ range . }}{{ $keywords = $keywords | append . }}{{ end }}{{ end -}}
+{{- with .Params.tags }}{{ range . }}{{ $keywords = $keywords | append . }}{{ end }}{{ end -}}
+{{- with .Params.category }}{{ $keywords = $keywords | append . }}{{ end -}}
+{{- with .Params.service }}{{ $keywords = $keywords | append . }}{{ end -}}
+{{- $keywords = $keywords | uniq -}}
+<title>{{ $fullTitle }}</title>
+<meta name="description" content="{{ $description }}" />
+{{- if gt (len $keywords) 0 }}
+<meta name="keywords" content="{{ delimit $keywords ", " }}" />
+{{- end }}
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}" />
+<meta name="publisher" content="{{ .Site.Title }}" />
+<meta name="generator" content="Hugo {{ hugo.Version }}" />
+<meta name="theme-color" content="#063d2d" />
+<meta name="application-name" content="{{ .Site.Title }}" />
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="robots" content="{{ if or .Params.noindex $isCart }}noindex,nofollow{{ else }}index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1{{ end }}" />
+<meta name="googlebot" content="{{ if or .Params.noindex $isCart }}noindex,nofollow{{ else }}index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1{{ end }}" />
+<meta name="bingbot" content="{{ if or .Params.noindex $isCart }}noindex,nofollow{{ else }}index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1{{ end }}" />
+<link rel="canonical" href="{{ $canonical }}" />
+<link rel="alternate" hreflang="id-ID" href="{{ $canonical }}" />
+<link rel="alternate" hreflang="x-default" href="{{ $canonical }}" />
+<link rel="sitemap" type="application/xml" href="{{ "/sitemap.xml" | absURL }}" />
+<link rel="alternate" type="text/plain" href="{{ "/llms.txt" | absURL }}" title="LLMs text" />
+{{- if not $isCart }}
+{{- with .OutputFormats.Get "RSS" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Title }} RSS" />
+{{- end }}
+{{- end }}
+<link rel="icon" type="image/png" href="{{ .Site.Params.logo }}" />
+<link rel="apple-touch-icon" href="{{ .Site.Params.logo }}" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:type" content="{{ if $isArticle }}article{{ else if $isProduct }}product{{ else }}website{{ end }}" />
+<meta property="og:title" content="{{ $fullTitle }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ $canonical }}" />
+<meta property="og:image" content="{{ $image }}" />
+<meta property="og:image:secure_url" content="{{ $image }}" />
+<meta property="og:image:alt" content="{{ $imageAlt }}" />
+<meta property="og:image:type" content="image/png" />
+{{- if not .Lastmod.IsZero }}
+<meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+{{- end }}
+<meta itemprop="image" content="{{ $image }}" />
+<meta name="thumbnail" content="{{ $image }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $fullTitle }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ $image }}" />
+<meta name="twitter:image:alt" content="{{ $imageAlt }}" />
+{{- if $isProduct }}
+<meta property="product:price:amount" content="{{ .Params.price }}" />
+<meta property="product:price:currency" content="IDR" />
+<meta property="product:availability" content="in stock" />
+<meta property="product:category" content="{{ .Params.category }}" />
+{{- end }}
+{{- if $isPortfolio }}
+<meta name="portfolio:category" content="{{ .Params.category }}" />
+<meta name="portfolio:service" content="{{ .Params.service }}" />
+{{- end }}
+{{- if $isArticle }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+<meta property="article:author" content="{{ .Params.author | default .Site.Params.author }}" />
+<meta property="article:section" content="{{ $sectionName }}" />
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}" />
+{{- end }}
+{{- if gt (len $keywords) 0 }}
+<meta name="news_keywords" content="{{ delimit $keywords ", " }}" />
+{{- end }}
+{{- end }}
+{{- $orgID := printf "%s#organization" .Site.BaseURL -}}
+{{- $websiteID := printf "%s#website" .Site.BaseURL -}}
+{{- $webpageID := printf "%s#webpage" .Permalink -}}
+{{- $org := dict "@context" "https://schema.org" "@id" $orgID "@type" (slice "Organization" (.Site.Params.businessType | default "LocalBusiness")) "name" .Site.Title "url" .Site.BaseURL "logo" (dict "@type" "ImageObject" "url" (.Site.Params.logo | absURL)) "image" $image "email" .Site.Params.email "telephone" .Site.Params.whatsapp "address" .Site.Params.address "hasMap" .Site.Params.addressURL "sameAs" (slice .Site.Params.addressURL) "areaServed" (.Site.Params.areaServed | default "Indonesia") "contactPoint" (slice (dict "@type" "ContactPoint" "telephone" .Site.Params.whatsapp "contactType" "customer service" "areaServed" "ID" "availableLanguage" (slice "Indonesian" "id-ID"))) -}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- $website := dict "@context" "https://schema.org" "@id" $websiteID "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL "description" .Site.Params.description "inLanguage" "id-ID" "publisher" (dict "@id" $orgID) -}}
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{- $webPageType := "WebPage" -}}
+{{- if or .IsSection (eq .Kind "term") }}{{ $webPageType = "CollectionPage" }}{{ end -}}
+{{- if .IsHome }}{{ $webPageType = "HomePage" }}{{ end -}}
+{{- $webpage := dict "@context" "https://schema.org" "@id" $webpageID "@type" $webPageType "name" $fullTitle "headline" $title "url" $canonical "description" $description "isPartOf" (dict "@id" $websiteID) "publisher" (dict "@id" $orgID) "primaryImageOfPage" (dict "@type" "ImageObject" "url" $image "caption" $imageAlt) "breadcrumb" (printf "%s#breadcrumb" .Permalink) "inLanguage" "id-ID" "keywords" (delimit $keywords ", ") -}}
+<script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>
+{{- $breadcrumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Beranda" "item" .Site.BaseURL) -}}
+{{- if and (not .IsHome) (eq .Section "artikel") -}}
+{{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 2 "name" "Artikel" "item" ("/artikel/" | absURL)) -}}
+{{- if .IsPage }}{{ $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink) }}{{ end -}}
+{{- else if and (not .IsHome) (hasPrefix .RelPermalink "/produk/") -}}
+{{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 2 "name" "Produk" "item" ("/produk/" | absURL)) -}}
+{{- if .IsPage }}{{ $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink) }}{{ end -}}
+{{- else if and (not .IsHome) (hasPrefix .RelPermalink "/portfolio/") -}}
+{{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 2 "name" "Portfolio" "item" ("/portfolio/" | absURL)) -}}
+{{- if .IsPage }}{{ $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink) }}{{ end -}}
+{{- else if not .IsHome -}}
+{{- $breadcrumbs = $breadcrumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $breadcrumbLD := dict "@context" "https://schema.org" "@id" (printf "%s#breadcrumb" .Permalink) "@type" "BreadcrumbList" "itemListElement" $breadcrumbs -}}
+<script type="application/ld+json">{{ $breadcrumbLD | jsonify | safeJS }}</script>
+{{- if $isArticle }}
+{{- $article := dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "description" $description "image" (slice $image) "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00") "author" (dict "@type" "Organization" "name" (.Params.author | default .Site.Params.author)) "publisher" (dict "@id" $orgID) "mainEntityOfPage" (dict "@id" $webpageID) "articleSection" $sectionName "keywords" (delimit $keywords ", ") "inLanguage" "id-ID" -}}
+<script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+{{- end }}

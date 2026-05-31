@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ partial "seo.html" . }}
+  {{ partial "site-assets.html" . }}
+</head>
+<body class="overflow-x-hidden">
+  <main class="relative mx-auto max-w-[1440px] bg-white overflow-hidden min-h-screen">
+    <div class="absolute inset-0 pointer-events-none grain opacity-50"></div>
+    <div class="absolute -top-20 right-0 w-[480px] h-[480px] bg-orange-100 rounded-full blur-3xl opacity-60"></div>
+    {{ partial "header.html" . }}
+
+    <article class="relative z-10 px-[14px] md:px-14 pt-14 pb-16">
+      <nav class="text-sm text-gray-500">
+        <a href="/" class="font-bold text-ilta">Beranda</a>
+        {{ with .CurrentSection }}
+        {{ if ne .RelPermalink "/" }}
+        <span class="mx-2">/</span>
+        <a href="{{ .RelPermalink }}" class="font-bold text-ilta">{{ .Title }}</a>
+        {{ end }}
+        {{ end }}
+        <span class="mx-2">/</span>
+        <span>{{ .Title }}</span>
+      </nav>
+
+      <div class="mt-8 grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-oren font-black text-xs uppercase tracking-widest border border-orange-200">{{ .Params.eyebrow | default .CurrentSection.Title }}</div>
+          <h1 class="mt-6 text-[42px] md:text-[72px] leading-[.95] font-black tracking-tight text-ilta uppercase">{{ .Title }}</h1>
+          <p class="mt-5 max-w-2xl text-lg text-gray-600 leading-relaxed">{{ .Params.description }}</p>
+
+          {{ with .Params.points }}
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            {{ range . }}
+            <div class="bg-white border shadow-soft rounded-[24px] p-5">
+              <p class="text-xs font-black uppercase tracking-widest text-oren">{{ .label }}</p>
+              <p class="mt-2 font-black text-ilta">{{ .title }}</p>
+              <p class="mt-2 text-sm text-gray-500 leading-relaxed">{{ .description }}</p>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          <div class="article-body mt-8 bg-white border shadow-soft rounded-[32px] p-6 md:p-10">
+            {{ .Content }}
+          </div>
+        </div>
+
+        <aside class="lg:sticky lg:top-6 bg-ilta text-white rounded-[32px] p-7 shadow-deep">
+          <p class="text-xs font-black uppercase tracking-widest text-orange-200">Konsultasi</p>
+          <h2 class="mt-2 text-2xl font-black">Butuh arahan sebelum order?</h2>
+          <p class="mt-4 text-sm text-emerald-100 leading-relaxed">Kirim kebutuhan, ukuran, bahan, jumlah, dan contoh referensi. Tim ILTA PRINT akan bantu arahkan pilihan yang paling pas.</p>
+          <a href="https://wa.me/6285183369972" class="mt-6 inline-flex bg-white text-ilta px-6 py-4 rounded-full font-black">Chat WhatsApp</a>
+        </aside>
+      </div>
+    </article>
+
+    {{ partial "main-cta.html" . }}
+    {{ partial "footer.html" . }}
+    {{ partial "floating-actions.html" . }}
+  </main>
+</body>
+</html>

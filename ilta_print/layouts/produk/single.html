@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ partial "seo.html" . }}
+  {{ partial "site-assets.html" . }}
+  {{- $offers := slice -}}
+  {{- range .Params.variants -}}
+    {{- $offers = $offers | append (dict "@type" "Offer" "name" .name "priceCurrency" "IDR" "price" (printf "%v" .price) "availability" "https://schema.org/InStock" "itemCondition" "https://schema.org/NewCondition" "url" $.Permalink "seller" (dict "@type" "Organization" "name" site.Title)) -}}
+  {{- end -}}
+  {{- $product := dict "@context" "https://schema.org" "@type" "Product" "name" .Title "sku" .File.BaseFileName "category" .Params.category "description" .Params.description "image" (slice (.Params.image | default site.Params.articleDefaultImage | absURL)) "brand" (dict "@type" "Brand" "name" site.Title) "offers" $offers "url" .Permalink -}}
+  <script type="application/ld+json">{{ $product | jsonify | safeJS }}</script>
+</head>
+<body class="overflow-x-hidden">
+  <main class="relative mx-auto max-w-[1440px] bg-white overflow-hidden min-h-screen">
+    <div class="absolute inset-0 pointer-events-none grain opacity-50"></div>
+    <div class="absolute -top-20 right-0 w-[480px] h-[480px] bg-orange-100 rounded-full blur-3xl opacity-60"></div>
+    {{ partial "header.html" . }}
+
+    <section class="relative z-10 grid lg:grid-cols-2 gap-10 px-[14px] md:px-14 pt-14 pb-16 items-start">
+      <div>
+        <nav class="text-sm text-gray-500">
+          <a href="/" class="font-bold text-ilta">Beranda</a>
+          <span class="mx-2">/</span>
+          <a href="/produk/" class="font-bold text-ilta">Produk</a>
+          <span class="mx-2">/</span>
+          <span>{{ .Title }}</span>
+        </nav>
+        <div class="mt-8 rounded-[36px] overflow-hidden border shadow-soft bg-soft">
+          <img src="{{ .Params.image | default site.Params.articleDefaultImage }}" alt="{{ .Title }}" class="w-full h-[360px] md:h-[520px] object-cover" />
+        </div>
+      </div>
+
+      <div class="lg:sticky lg:top-6">
+        <span class="text-xs bg-orange-50 text-oren px-3 py-1 rounded-full font-black uppercase">{{ .Params.category }}</span>
+        <h1 class="mt-5 text-[44px] md:text-[72px] leading-[.95] font-black tracking-tight text-ilta uppercase">{{ .Title }}</h1>
+        <p class="mt-5 text-lg text-gray-600 leading-relaxed">{{ .Params.description }}</p>
+
+        <div class="mt-8 bg-white border shadow-soft rounded-[32px] p-6" data-product-purchase>
+          <label class="text-xs font-black uppercase tracking-widest text-oren" for="variant">Pilihan Produk</label>
+          <select id="variant" data-product-variant class="mt-3 w-full rounded-2xl border bg-white px-4 py-4 font-bold text-ilta">
+            {{ range .Params.variants }}
+            <option value="{{ .name }}" data-price="{{ .price }}">{{ .name }} - Rp {{ lang.FormatNumber 0 .price }}</option>
+            {{ end }}
+          </select>
+          <label class="mt-5 block text-xs font-black uppercase tracking-widest text-oren" for="qty">Jumlah</label>
+          <input id="qty" data-product-qty class="mt-3 w-full rounded-2xl border px-4 py-4 font-bold text-ilta" type="number" min="1" value="1" />
+          <div class="mt-6 grid sm:grid-cols-2 gap-3">
+            {{ $firstVariant := index .Params.variants 0 }}
+            <button class="bg-ilta text-white px-6 py-4 rounded-full font-black shadow-deep" data-add-cart data-product-id="{{ .File.BaseFileName }}" data-product-title="{{ .Title }}" data-product-url="{{ .RelPermalink }}" data-product-image="{{ .Params.image | default site.Params.articleDefaultImage }}" data-product-unit="{{ .Params.unit }}" data-product-variant="{{ $firstVariant.name }}" data-product-price="{{ $firstVariant.price }}" data-product-qty="1">Tambah ke Cart</button>
+            <a href="/cart/" class="bg-white border border-gray-200 px-6 py-4 rounded-full font-black shadow-soft text-center text-ilta">Lihat Cart</a>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-soft border rounded-[32px] p-6">
+          <h2 class="text-2xl font-black text-ilta">Detail Produk</h2>
+          <div class="article-body mt-4">{{ .Content }}</div>
+          {{ with .Params.features }}
+          <ul class="mt-5 space-y-2 text-sm text-gray-600">
+            {{ range . }}<li class="rounded-2xl bg-white px-4 py-3 font-semibold">{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    {{ partial "main-cta.html" . }}
+    {{ partial "footer.html" . }}
+    {{ partial "floating-actions.html" . }}
+  </main>
+</body>
+</html>

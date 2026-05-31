@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ partial "seo.html" . }}
+  {{ partial "site-assets.html" . }}
+  {{ $creative := dict "@context" "https://schema.org" "@type" "CreativeWork" "name" .Title "headline" .Title "description" .Params.description "image" (.Params.image | default site.Params.defaultImage | absURL) "thumbnailUrl" (.Params.image | default site.Params.defaultImage | absURL) "creator" (dict "@type" "Organization" "name" site.Title) "provider" (dict "@type" "Organization" "name" site.Title "url" site.BaseURL) "genre" .Params.category "about" .Params.service "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "url" .Permalink "inLanguage" "id-ID" }}
+  <script type="application/ld+json">{{ $creative | jsonify | safeJS }}</script>
+</head>
+<body class="overflow-x-hidden">
+  <main class="relative mx-auto max-w-[1440px] bg-white overflow-hidden min-h-screen">
+    <div class="absolute inset-0 pointer-events-none grain opacity-50"></div>
+    <div class="absolute -top-20 right-0 w-[480px] h-[480px] bg-orange-100 rounded-full blur-3xl opacity-60"></div>
+    {{ partial "header.html" . }}
+
+    <article class="relative z-10 px-[14px] md:px-14 pt-14 pb-16">
+      <nav class="text-sm text-gray-500">
+        <a href="/" class="font-bold text-ilta">Beranda</a>
+        <span class="mx-2">/</span>
+        <a href="/portfolio/" class="font-bold text-ilta">Portfolio</a>
+        <span class="mx-2">/</span>
+        <span>{{ .Title }}</span>
+      </nav>
+
+      <div class="mt-8 grid lg:grid-cols-[1.1fr_.9fr] gap-10 items-start">
+        <div class="rounded-[36px] overflow-hidden border shadow-soft bg-soft">
+          <img src="{{ .Params.image | default site.Params.defaultImage }}" alt="{{ .Title }}" class="w-full h-[360px] md:h-[620px] object-cover" />
+        </div>
+
+        <div class="lg:sticky lg:top-6">
+          <span class="text-xs bg-orange-50 text-oren px-3 py-1 rounded-full font-black uppercase">{{ .Params.category }}</span>
+          <h1 class="mt-5 text-[42px] md:text-[72px] leading-[.95] font-black tracking-tight text-ilta uppercase">{{ .Title }}</h1>
+          <p class="mt-5 text-lg text-gray-600 leading-relaxed">{{ .Params.description }}</p>
+
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            <div class="bg-white border shadow-soft rounded-[24px] p-5"><p class="text-xs font-black uppercase tracking-widest text-oren">Client</p><p class="mt-2 font-black text-ilta">{{ .Params.client }}</p></div>
+            <div class="bg-white border shadow-soft rounded-[24px] p-5"><p class="text-xs font-black uppercase tracking-widest text-oren">Layanan</p><p class="mt-2 font-black text-ilta">{{ .Params.service }}</p></div>
+          </div>
+
+          {{ with .Params.highlights }}
+          <section class="mt-6 bg-ilta text-white rounded-[30px] p-6 shadow-deep">
+            <p class="text-xs font-black uppercase tracking-widest text-orange-200">Highlight</p>
+            <ul class="mt-4 space-y-3 text-sm text-emerald-100 leading-relaxed">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          </section>
+          {{ end }}
+
+          <div class="article-body mt-6 bg-white border shadow-soft rounded-[30px] p-6">{{ .Content }}</div>
+          <a href="https://wa.me/6285183369972" class="mt-6 inline-flex bg-ilta text-white px-6 py-4 rounded-full font-black shadow-deep">Buat Project Serupa</a>
+        </div>
+      </div>
+    </article>
+    {{ partial "main-cta.html" . }}
+    {{ partial "footer.html" . }}
+    {{ partial "floating-actions.html" . }}
+  </main>
+</body>
+</html>
